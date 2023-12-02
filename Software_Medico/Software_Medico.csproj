@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D49192EE-E16E-4388-865D-825BA43D98FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Software_Medico</RootNamespace>
+    <AssemblyName>Software_Medico</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Patologias.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Aux_AgregarEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_AgregarEnfermedad.Designer.cs">
+      <DependentUpon>Aux_AgregarEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Aux_Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_Doctor.Designer.cs">
+      <DependentUpon>Aux_Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Aux_Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_Paciente.Designer.cs">
+      <DependentUpon>Aux_Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Cita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Cita.Designer.cs">
+      <DependentUpon>Frm_Cita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Doctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Doctores.Designer.cs">
+      <DependentUpon>Frm_Doctores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Enfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Enfermedades.Designer.cs">
+      <DependentUpon>Frm_Enfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Examenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Examenes.Designer.cs">
+      <DependentUpon>Frm_Examenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Facturacion.Designer.cs">
+      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Inventario.Designer.cs">
+      <DependentUpon>Frm_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Paciente.Designer.cs">
+      <DependentUpon>Frm_Paciente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Aux_AgregarEnfermedad.resx">
+      <DependentUpon>Aux_AgregarEnfermedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Aux_Doctor.resx">
+      <DependentUpon>Aux_Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Aux_Paciente.resx">
+      <DependentUpon>Aux_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Cita.resx">
+      <DependentUpon>Frm_Cita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Doctores.resx">
+      <DependentUpon>Frm_Doctores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Enfermedades.resx">
+      <DependentUpon>Frm_Enfermedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Examenes.resx">
+      <DependentUpon>Frm_Examenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Facturacion.resx">
+      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Inventario.resx">
+      <DependentUpon>Frm_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Paciente.resx">
+      <DependentUpon>Frm_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\computadora %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\examenes-de-salud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\prevencion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\programador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\reporte-de-negocios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\estetoscopio %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cerrar-sesion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\minimizar %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\maximizar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar %283%29 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
