@@ -69,6 +69,12 @@
     <Compile Include="Vistas\Aux_Doctor.Designer.cs">
       <DependentUpon>Aux_Doctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Aux_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_Inventario.Designer.cs">
+      <DependentUpon>Aux_Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Aux_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Aux_Doctor.resx">
       <DependentUpon>Aux_Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Aux_Inventario.resx">
+      <DependentUpon>Aux_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Aux_Paciente.resx">
       <DependentUpon>Aux_Paciente.cs</DependentUpon>
