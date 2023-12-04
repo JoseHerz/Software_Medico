@@ -63,6 +63,26 @@ namespace Software_Medico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8742318 {
+            get {
+                object obj = ResourceManager.GetObject("8742318", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8742318__2_ {
+            get {
+                object obj = ResourceManager.GetObject("8742318 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar_sesion__1_ {
             get {
                 object obj = ResourceManager.GetObject("cerrar-sesion (1)", resourceCulture);
@@ -126,6 +146,26 @@ namespace Software_Medico.Properties {
         internal static System.Drawing.Bitmap examenes_de_salud {
             get {
                 object obj = ResourceManager.GetObject("examenes-de-salud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagen_2023_12_03_161154132 {
+            get {
+                object obj = ResourceManager.GetObject("imagen_2023-12-03_161154132", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagen_2023_12_03_161154132__1_ {
+            get {
+                object obj = ResourceManager.GetObject("imagen_2023-12-03_161154132 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +246,16 @@ namespace Software_Medico.Properties {
         internal static System.Drawing.Bitmap programador {
             get {
                 object obj = ResourceManager.GetObject("programador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap programador1 {
+            get {
+                object obj = ResourceManager.GetObject("programador1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

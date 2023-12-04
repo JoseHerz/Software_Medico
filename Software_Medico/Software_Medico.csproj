@@ -33,6 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPVerNET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -62,6 +78,12 @@
     </Compile>
     <Compile Include="Vistas\Aux_AgregarEnfermedad.Designer.cs">
       <DependentUpon>Aux_AgregarEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Aux_AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_AgregarUsuario.Designer.cs">
+      <DependentUpon>Aux_AgregarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Aux_Doctor.cs">
       <SubType>Form</SubType>
@@ -117,6 +139,12 @@
     <Compile Include="Vistas\Frm_Inventario.Designer.cs">
       <DependentUpon>Frm_Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Frm_LogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_LogOut.Designer.cs">
+      <DependentUpon>Frm_LogOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Frm_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Aux_AgregarEnfermedad.resx">
       <DependentUpon>Aux_AgregarEnfermedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Aux_AgregarUsuario.resx">
+      <DependentUpon>Aux_AgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Aux_Doctor.resx">
       <DependentUpon>Aux_Doctor.cs</DependentUpon>
@@ -165,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Inventario.resx">
       <DependentUpon>Frm_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_LogOut.resx">
+      <DependentUpon>Frm_LogOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Paciente.resx">
       <DependentUpon>Frm_Paciente.cs</DependentUpon>
@@ -229,6 +263,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimizar %283%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen_2023-12-03_161154132.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen_2023-12-03_161154132 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8742318.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8742318 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

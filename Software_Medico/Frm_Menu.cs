@@ -131,6 +131,11 @@ namespace Software_Medico
             frm_Cita.Show();
         }
 
+        private void Btn_Usuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Funcionalidad de la ventana
         int m, mx, my;
         private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
@@ -140,6 +145,8 @@ namespace Software_Medico
                 this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
             }
         }
+
+        
 
         private void Pnl_Barra_MouseUp(object sender, MouseEventArgs e)
         {

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
+            this.Cmb_Categoria = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Dtp_Vencimiento = new System.Windows.Forms.DateTimePicker();
             this.Txt_EnfCronica = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
@@ -48,9 +51,6 @@
             this.Ptb_Min = new System.Windows.Forms.PictureBox();
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Dtp_Vencimiento = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Cmb_Categoria = new System.Windows.Forms.ComboBox();
             this.Pnl_Formulario.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
@@ -78,10 +78,40 @@
             this.Pnl_Formulario.Controls.Add(this.Btn_Guardar);
             this.Pnl_Formulario.Controls.Add(this.Txt_Nombre);
             this.Pnl_Formulario.Controls.Add(this.label2);
+            this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(0, 40);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
-            this.Pnl_Formulario.Size = new System.Drawing.Size(537, 482);
+            this.Pnl_Formulario.Size = new System.Drawing.Size(566, 595);
             this.Pnl_Formulario.TabIndex = 10;
+            // 
+            // Cmb_Categoria
+            // 
+            this.Cmb_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_Categoria.FormattingEnabled = true;
+            this.Cmb_Categoria.Location = new System.Drawing.Point(361, 115);
+            this.Cmb_Categoria.Name = "Cmb_Categoria";
+            this.Cmb_Categoria.Size = new System.Drawing.Size(187, 33);
+            this.Cmb_Categoria.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 275);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(234, 25);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Fecha de Vencimiento:";
+            // 
+            // Dtp_Vencimiento
+            // 
+            this.Dtp_Vencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Dtp_Vencimiento.Location = new System.Drawing.Point(268, 275);
+            this.Dtp_Vencimiento.Name = "Dtp_Vencimiento";
+            this.Dtp_Vencimiento.Size = new System.Drawing.Size(166, 30);
+            this.Dtp_Vencimiento.TabIndex = 55;
             // 
             // Txt_EnfCronica
             // 
@@ -200,7 +230,7 @@
             this.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Cancelar.Location = new System.Drawing.Point(-114, 471);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(298, 499);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(154, 50);
             this.Btn_Cancelar.TabIndex = 19;
@@ -214,7 +244,7 @@
             this.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Guardar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Guardar.Location = new System.Drawing.Point(-274, 471);
+            this.Btn_Guardar.Location = new System.Drawing.Point(138, 499);
             this.Btn_Guardar.Name = "Btn_Guardar";
             this.Btn_Guardar.Size = new System.Drawing.Size(154, 50);
             this.Btn_Guardar.TabIndex = 18;
@@ -249,7 +279,7 @@
             this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Barra.Name = "Pnl_Barra";
-            this.Pnl_Barra.Size = new System.Drawing.Size(592, 40);
+            this.Pnl_Barra.Size = new System.Drawing.Size(566, 40);
             this.Pnl_Barra.TabIndex = 9;
             // 
             // Ptb_Min
@@ -257,7 +287,7 @@
             this.Ptb_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
-            this.Ptb_Min.Location = new System.Drawing.Point(492, 3);
+            this.Ptb_Min.Location = new System.Drawing.Point(466, 3);
             this.Ptb_Min.Name = "Ptb_Min";
             this.Ptb_Min.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Min.TabIndex = 3;
@@ -268,7 +298,7 @@
             this.Ptb_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
-            this.Ptb_Cerrar.Location = new System.Drawing.Point(543, 3);
+            this.Ptb_Cerrar.Location = new System.Drawing.Point(517, 3);
             this.Ptb_Cerrar.Name = "Ptb_Cerrar";
             this.Ptb_Cerrar.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Cerrar.TabIndex = 1;
@@ -286,40 +316,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar Articulo";
             // 
-            // Dtp_Vencimiento
-            // 
-            this.Dtp_Vencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dtp_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_Vencimiento.Location = new System.Drawing.Point(268, 275);
-            this.Dtp_Vencimiento.Name = "Dtp_Vencimiento";
-            this.Dtp_Vencimiento.Size = new System.Drawing.Size(166, 30);
-            this.Dtp_Vencimiento.TabIndex = 55;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 275);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 25);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Fecha de Vencimiento:";
-            // 
-            // Cmb_Categoria
-            // 
-            this.Cmb_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Categoria.FormattingEnabled = true;
-            this.Cmb_Categoria.Location = new System.Drawing.Point(361, 115);
-            this.Cmb_Categoria.Name = "Cmb_Categoria";
-            this.Cmb_Categoria.Size = new System.Drawing.Size(187, 33);
-            this.Cmb_Categoria.TabIndex = 57;
-            // 
             // Aux_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 635);
+            this.ClientSize = new System.Drawing.Size(566, 635);
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.Pnl_Barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
