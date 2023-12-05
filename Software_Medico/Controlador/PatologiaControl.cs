@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Software_Medico.Controlador
 {
-    internal class OrderLabControl
+    internal class PatologiaControl
     {
 
-        public bool CrearOrderLab(OrderLabModel Modelo)
+        public bool CrearPatologia(PatologiasModel Modelo)
         {
 
             try
@@ -22,28 +22,14 @@ namespace Software_Medico.Controlador
                 {
                     Con.Open();
                     string sql =
-                        "Insert Into ORDENES_LABORATORIO(" +
-                        "ID_ORDEN_LABORATORIO," +
-                        "ID_PACIENTE," +
-                        "ID_EXPEDIENTE," +
-                        "ID_MEDICO," +
-                        "FECHA_ORDEN," +
-                        "ID_EXAMEN," +
-                        "ESTADO_ORDEN," +
-                        "RESULTADOS," +
-                        "ID_LABORATORIO," +
-                        "ID_USUARIO" +
+                        "Insert Into PATOLOGIAS(" +
+                        "ID_PATOLOGIA," +
+                        "NOMBRE_PATOLOGIA," +
+                        "DESCRIPCION_PATOLOGIA," +
                         ") select" +
-                        " '" + Modelo.Id_Orden_Laboratorio + "'," +
-                        " '" + Modelo.Id_Paciente + "'," +
-                        " '" + Modelo.Id_Expediente + "'," +
-                        " '" + Modelo.Id_Medico + "'," +
-                        " '" + Modelo.Fecha_Orden + "'," +
-                        " '" + Modelo.Id_Examen + "'," +
-                        " '" + Modelo.Estado_Orden + "'," +
-                        " '" + Modelo.Resultados + "'," +
-                        " '" + Modelo.Id_Laboratorio + "'," +
-                        " '" + Modelo.Id_Usuario + "'";
+                        " '" + Modelo.Id_Patologia + "'," +
+                        " '" + Modelo.Nombre_Patologia + "'," +
+                        " '" + Modelo.Descripcion_Patologia + "'";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
@@ -68,7 +54,7 @@ namespace Software_Medico.Controlador
 
 
         }
-        public bool ValidOrderLab(OrderLabModel Modelo)
+        public bool ValidPatologia(PatologiasModel Modelo)
         {
             bool existeDuplicado = false;
             try
@@ -76,11 +62,11 @@ namespace Software_Medico.Controlador
                 using (SqlConnection Con = new Conexion().GetConexion())
                 {
                     Con.Open();
-                    string sql = "Select Count (*) from ORDENES_LABORATORIO Where ID_ORDEN_LABORATORIO = @Idorderlab";
+                    string sql = "Select Count (*) from PATOLOGIAS Where ID_PATOLOGIA = @Idpato";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
-                        cmd.Parameters.AddWithValue("@Idorderlab", Modelo.Id_Orden_Laboratorio);
+                        cmd.Parameters.AddWithValue("@Idpato", Modelo.Id_Patologia);
                         int count = (int)cmd.ExecuteScalar();
 
                         if (count > 0)
@@ -108,7 +94,7 @@ namespace Software_Medico.Controlador
 
         }
 
-        public bool UpdateOrderLab(OrderLabModel Modelo)
+        public bool UpdatePatologia(PatologiasModel Modelo)
         {
             try
             {
@@ -116,17 +102,10 @@ namespace Software_Medico.Controlador
                 {
                     Con.Open();
                     string sql =
-                        "UPDATE ORDENES_LABORATORIO SET " +
-                        "ID_PACIENTE =                      '" + Modelo.Id_Paciente + "'," +
-                        "ID_EXPEDIENTE =                    '" + Modelo.Id_Expediente + "', " +
-                        "ID_MEDICO =                        '" + Modelo.Id_Medico + "'" +
-                        "FECHA_ORDEN =                      '" + Modelo.Fecha_Orden + "'" +
-                        "ID_EXAMEN =                        '" + Modelo.Id_Examen + "'" +
-                        "ESTADO_ORDEN =                     '" + Modelo.Estado_Orden + "'" +
-                        "RESULTADOS =                       '" + Modelo.Resultados + "'" +
-                        "ID_LABORATORIO =                   '" + Modelo.Id_Laboratorio + "'" +
-                        "ID_USUARIO =                       '" + Modelo.Id_Usuario + "'" +
-                        " WHERE ID_ORDEN_LABORATORIO =      '" + Modelo.Id_Orden_Laboratorio + "';";
+                        "UPDATE PATOLOGIAS SET " +
+                        "NOMBRE_PATOLOGIA =         '" + Modelo.Nombre_Patologia + "'," +
+                        "DESCRIPCION_PATOLOGIA =    '" + Modelo.Descripcion_Patologia + "', " +
+                        "WHERE ID_PATOLOGIA =       '" + Modelo.Id_Patologia + "';";
 
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
@@ -153,14 +132,14 @@ namespace Software_Medico.Controlador
 
         }
 
-        public void ListarOrderLab()
+        public void ListarPatologia()
         {
             DataTable dt = new DataTable();
             try
             {
                 SqlConnection Con = new Conexion().GetConexion();
                 Con.Open();
-                string sql = "Select * from ORDENES_LABORATORIO";
+                string sql = "Select * from PATOLOGIAS";
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
                 adaptador.Fill(dt);
             }
@@ -168,17 +147,18 @@ namespace Software_Medico.Controlador
             {
                 MessageBox.Show(ex.Message);
             }
-            OrderLabModel.GetOrderLab = dt;
+            PatologiasModel.GetPatologia = dt;
 
         }
-        public bool EliminarOrderLab(OrderLabModel Modelo)
+
+        public bool EliminarPatologia(PatologiasModel Modelo)
         {
             try
             {
                 using (SqlConnection Con = new Conexion().GetConexion())
                 {
                     Con.Open();
-                    string sql = "DELETE FROM ORDENES_LABORATORIO WHERE ID_ORDEN_LABORATORIO = '" + Modelo.Id_Orden_Laboratorio + "';";
+                    string sql = "DELETE FROM PATOLOGIAS WHERE ID_PATOLOGIA = '" + Modelo.Id_Patologia + "';";
 
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))

@@ -19,7 +19,7 @@ namespace Software_Medico.Modelo
         public bool Estado_Orden { get; set; }
         public string Resultados { get; set; }
         public int Id_Laboratorio { get; set; }
-
+        public int Id_Usuario { get; set; }
         public static DataTable GetOrderLab { get; set; }
 
     }

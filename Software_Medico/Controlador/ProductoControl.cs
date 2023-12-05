@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Software_Medico.Controlador
 {
-    internal class OrderLabControl
+    internal class ProductoControl
     {
 
-        public bool CrearOrderLab(OrderLabModel Modelo)
+        public bool CrearProducto(ProductoModel Modelo)
         {
 
             try
@@ -22,28 +22,28 @@ namespace Software_Medico.Controlador
                 {
                     Con.Open();
                     string sql =
-                        "Insert Into ORDENES_LABORATORIO(" +
-                        "ID_ORDEN_LABORATORIO," +
-                        "ID_PACIENTE," +
-                        "ID_EXPEDIENTE," +
-                        "ID_MEDICO," +
-                        "FECHA_ORDEN," +
-                        "ID_EXAMEN," +
-                        "ESTADO_ORDEN," +
-                        "RESULTADOS," +
-                        "ID_LABORATORIO," +
-                        "ID_USUARIO" +
+                        "Insert Into PRODUCTOS(" +
+                        "ID_PRODUCTO," +
+                        "NOMBRE_PRODUCTO," +
+                        "CANTIDAD," +
+                        "UNIDAD_MEDIDA," +
+                        "FECHA_CADUCIDAD," +
+                        "PRECIO_UNITARIO," +
+                        "UBICACION," +
+                        "ID_TIPO_INVENTARIO," +
+                        "ESTATUS," +
+                        "INDICACIONES," +
                         ") select" +
-                        " '" + Modelo.Id_Orden_Laboratorio + "'," +
-                        " '" + Modelo.Id_Paciente + "'," +
-                        " '" + Modelo.Id_Expediente + "'," +
-                        " '" + Modelo.Id_Medico + "'," +
-                        " '" + Modelo.Fecha_Orden + "'," +
-                        " '" + Modelo.Id_Examen + "'," +
-                        " '" + Modelo.Estado_Orden + "'," +
-                        " '" + Modelo.Resultados + "'," +
-                        " '" + Modelo.Id_Laboratorio + "'," +
-                        " '" + Modelo.Id_Usuario + "'";
+                        " '" + Modelo.Id_Producto + "'," +
+                        " '" + Modelo.Nombre_Producto + "'," +
+                        " '" + Modelo.Cantidad + "'," +
+                        " '" + Modelo.Unidad_Medida + "'," +
+                        " '" + Modelo.Fecha_Caducidad + "'," +
+                        " '" + Modelo.Precio_Unitario + "'," +
+                        " '" + Modelo.Ubicacion + "'," +
+                        " '" + Modelo.Id_Tipo_Inventario + "'," +
+                        " '" + Modelo.Estatus + "'," +
+                        " '" + Modelo.Indicaciones + "'";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
@@ -68,7 +68,7 @@ namespace Software_Medico.Controlador
 
 
         }
-        public bool ValidOrderLab(OrderLabModel Modelo)
+        public bool ValidProducto(ProductoModel Modelo)
         {
             bool existeDuplicado = false;
             try
@@ -76,11 +76,11 @@ namespace Software_Medico.Controlador
                 using (SqlConnection Con = new Conexion().GetConexion())
                 {
                     Con.Open();
-                    string sql = "Select Count (*) from ORDENES_LABORATORIO Where ID_ORDEN_LABORATORIO = @Idorderlab";
+                    string sql = "Select Count (*) from PRODUCTOS Where ID_PRODUCTO = @Idproduc";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
-                        cmd.Parameters.AddWithValue("@Idorderlab", Modelo.Id_Orden_Laboratorio);
+                        cmd.Parameters.AddWithValue("@Idproduc", Modelo.Id_Producto);
                         int count = (int)cmd.ExecuteScalar();
 
                         if (count > 0)
@@ -108,7 +108,7 @@ namespace Software_Medico.Controlador
 
         }
 
-        public bool UpdateOrderLab(OrderLabModel Modelo)
+        public bool UpdateProducto(ProductoModel Modelo)
         {
             try
             {
@@ -116,17 +116,17 @@ namespace Software_Medico.Controlador
                 {
                     Con.Open();
                     string sql =
-                        "UPDATE ORDENES_LABORATORIO SET " +
-                        "ID_PACIENTE =                      '" + Modelo.Id_Paciente + "'," +
-                        "ID_EXPEDIENTE =                    '" + Modelo.Id_Expediente + "', " +
-                        "ID_MEDICO =                        '" + Modelo.Id_Medico + "'" +
-                        "FECHA_ORDEN =                      '" + Modelo.Fecha_Orden + "'" +
-                        "ID_EXAMEN =                        '" + Modelo.Id_Examen + "'" +
-                        "ESTADO_ORDEN =                     '" + Modelo.Estado_Orden + "'" +
-                        "RESULTADOS =                       '" + Modelo.Resultados + "'" +
-                        "ID_LABORATORIO =                   '" + Modelo.Id_Laboratorio + "'" +
-                        "ID_USUARIO =                       '" + Modelo.Id_Usuario + "'" +
-                        " WHERE ID_ORDEN_LABORATORIO =      '" + Modelo.Id_Orden_Laboratorio + "';";
+                        "UPDATE PRODUCTOS SET " +
+                        "NOMBRE_PRODUCTO =              '" + Modelo.Nombre_Producto + "'," +
+                        "CANTIDAD =                     '" + Modelo.Cantidad + "', " +
+                        "UNIDAD_MEDIDA =                '" + Modelo.Unidad_Medida + "'" +
+                        "FECHA_CADUCIDAD =              '" + Modelo.Fecha_Caducidad + "'" +
+                        "PRECIO_UNITARIO =              '" + Modelo.Precio_Unitario + "'" +
+                        "UBICACION =                    '" + Modelo.Ubicacion + "'" +
+                        "ID_TIPO_INVENTARIO =           '" + Modelo.Id_Tipo_Inventario + "'" +
+                        "ESTATUS =                      '" + Modelo.Estatus + "'" +
+                        "INDICACIONES =                 '" + Modelo.Indicaciones + "'" +
+                        " WHERE ID_PRODUCTO =           '" + Modelo.Id_Producto + "';";
 
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
@@ -153,14 +153,14 @@ namespace Software_Medico.Controlador
 
         }
 
-        public void ListarOrderLab()
+        public void ListarProducto()
         {
             DataTable dt = new DataTable();
             try
             {
                 SqlConnection Con = new Conexion().GetConexion();
                 Con.Open();
-                string sql = "Select * from ORDENES_LABORATORIO";
+                string sql = "Select * from PRODUCTOS";
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
                 adaptador.Fill(dt);
             }
@@ -168,17 +168,17 @@ namespace Software_Medico.Controlador
             {
                 MessageBox.Show(ex.Message);
             }
-            OrderLabModel.GetOrderLab = dt;
+            ProductoModel.GetProducto = dt;
 
         }
-        public bool EliminarOrderLab(OrderLabModel Modelo)
+        public bool EliminarProducto(ProductoModel Modelo)
         {
             try
             {
                 using (SqlConnection Con = new Conexion().GetConexion())
                 {
                     Con.Open();
-                    string sql = "DELETE FROM ORDENES_LABORATORIO WHERE ID_ORDEN_LABORATORIO = '" + Modelo.Id_Orden_Laboratorio + "';";
+                    string sql = "DELETE FROM PRODUCTOS WHERE ID_PRODUCTO = '" + Modelo.Id_Producto + "';";
 
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
@@ -204,6 +204,8 @@ namespace Software_Medico.Controlador
 
 
         }
+
+
 
 
 

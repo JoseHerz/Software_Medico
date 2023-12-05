@@ -71,6 +71,8 @@
     <Compile Include="Controlador\MedicoControl.cs" />
     <Compile Include="Controlador\OrderLabControl.cs" />
     <Compile Include="Controlador\PacienteControl.cs" />
+    <Compile Include="Controlador\PatologiaControl.cs" />
+    <Compile Include="Controlador\ProductoControl.cs" />
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
