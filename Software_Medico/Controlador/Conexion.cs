@@ -12,7 +12,7 @@ namespace Software_Medico.Controlador
     {
         public SqlConnection GetConexionW()
         {
-            return new SqlConnection(ConfigurationManager.ConnectionStrings["Conexion"].ToString());
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["DBDiseño"].ToString());
         }
     }
 }

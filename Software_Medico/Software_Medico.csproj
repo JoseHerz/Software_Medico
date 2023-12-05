@@ -70,7 +70,15 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\Patologias.cs" />
+    <Compile Include="Modelo\CitasModel.cs" />
+    <Compile Include="Modelo\ExamenModel.cs" />
+    <Compile Include="Modelo\ExpedienteModel.cs" />
+    <Compile Include="Modelo\FacturaModel.cs" />
+    <Compile Include="Modelo\MedicosModel.cs" />
+    <Compile Include="Modelo\OrderLabModel.cs" />
+    <Compile Include="Modelo\PacienteModel.cs" />
+    <Compile Include="Modelo\PatologiasModel.cs" />
+    <Compile Include="Modelo\ProductoModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Aux_AgregarEnfermedad.cs">
