@@ -10,7 +10,7 @@ namespace Software_Medico.Controlador
 {
     internal class Conexion
     {
-        public SqlConnection GetConexionW()
+        public SqlConnection GetConexion()
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings["DBDiseño"].ToString());
         }

@@ -24,6 +24,7 @@ namespace Software_Medico.Modelo
         public string Seguro_Medico { get; set; }
         public string Numero_Seguro_Medico { get; set; }
         public int Id_Usuario { get; set; }
+        public bool Estatus { get; set; }
 
 
         public static DataTable GetPaciente { get; set; }
