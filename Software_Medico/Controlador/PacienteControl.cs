@@ -27,7 +27,8 @@ namespace Software_Medico.Controlador
                         "FECHA_NACIMIENTO," +
                         "GENERO," +
                         "DIRECCION," +
-                        "TELEFONO,EMAIL," +
+                        "TELEFONO," +
+                        "EMAIL," +
                         "HISTORIA_MEDICA," +
                         "GRUPO_SANGUINEO," +
                         "ALERGIAS," +
@@ -125,23 +126,24 @@ namespace Software_Medico.Controlador
                 using (SqlConnection Con = new Conexion().GetConexion())
                 {
                     Con.Open();
-                    string sql = "UPDATE PACIENTES SET " +
-                        "NOMBRE = '" + Modelo.Nombre + "'," +
-                        "APELLIDO = '" + Modelo.Apellido + "', " +
-                        "FECHA_NACIMIENTO = '" + Modelo.Fecha_Nacimiento + "'," +
-                        "GENERO = '" + Modelo.Genero + "'" +
-                        "DIRECCION = '" + Modelo.Direccion + "'" +
-                        "TELEFONO = '" + Modelo.Telefono + "'" +
-                        "EMAIL = '" + Modelo.Email + "'" +
-                        "HISTORIA_MEDICA = '" + Modelo.Historia_Medica + "'" +
-                        "GRUPO_SANGUINEO = '" + Modelo.Grupo_Sanguineo + "'" +
-                        "ALERGIAS = '" + Modelo.Alergias + "'" +
-                        "ENFERMEDADES_CRONICAS = '" + Modelo.Enfermedades_Cronicas + "'" +
-                        "SEGURO_MEDICO = '" + Modelo.Seguro_Medico + "'" +
-                        "NUMERO_SEGURO_MEDICO = '" + Modelo.Numero_Seguro_Medico + "'" +
-                        "ID_USUARIO = '" + Modelo.Id_Usuario + "'" +
-                        "ESTATUS = '" + Modelo.Estatus + "'" +
-                        " WHERE ID_PACIENTE = '" + Modelo.Id_Paciente + "';";
+                    string sql =
+                        "UPDATE PACIENTES SET " +
+                        "NOMBRE =                   '" + Modelo.Nombre + "'," +
+                        "APELLIDO =                 '" + Modelo.Apellido + "', " +
+                        "FECHA_NACIMIENTO =         '" + Modelo.Fecha_Nacimiento + "'," +
+                        "GENERO =                   '" + Modelo.Genero + "'" +
+                        "DIRECCION =                '" + Modelo.Direccion + "'" +
+                        "TELEFONO =                 '" + Modelo.Telefono + "'" +
+                        "EMAIL =                    '" + Modelo.Email + "'" +
+                        "HISTORIA_MEDICA =          '" + Modelo.Historia_Medica + "'" +
+                        "GRUPO_SANGUINEO =          '" + Modelo.Grupo_Sanguineo + "'" +
+                        "ALERGIAS =                 '" + Modelo.Alergias + "'" +
+                        "ENFERMEDADES_CRONICAS =    '" + Modelo.Enfermedades_Cronicas + "'" +
+                        "SEGURO_MEDICO =            '" + Modelo.Seguro_Medico + "'" +
+                        "NUMERO_SEGURO_MEDICO =     '" + Modelo.Numero_Seguro_Medico + "'" +
+                        "ID_USUARIO =               '" + Modelo.Id_Usuario + "'" +
+                        "ESTATUS =                  '" + Modelo.Estatus + "'" +
+                        " WHERE ID_PACIENTE =       '" + Modelo.Id_Paciente + "';";
 
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))

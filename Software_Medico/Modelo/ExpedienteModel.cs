@@ -14,6 +14,7 @@ namespace Software_Medico.Modelo
 
         public int Id_Cita { get; set; }
         public int Id_Paciente { get; set; }
+        public int Id_Medico { get; set; }
 
         public DateTime Fecha_Ingreso { get; set; }
 
@@ -25,6 +26,7 @@ namespace Software_Medico.Modelo
         public int Id_Examenes { get; set; }
         public string Resultado_Examen { get; set; }
         public int Id_Producto { get; set; }
+        public int Id_Usuario { get; set; }
         public int Cantidad { get; set; }
         public string Instrucciones { get; set; }
 

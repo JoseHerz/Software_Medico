@@ -21,6 +21,7 @@ namespace Software_Medico.Modelo
         public string Estado_Cita { get; set; }
         public int Id_Tipo_Cita { get; set; }
         public int Id_Clinica { get; set; }
+        public int Id_Usuario { get; set; }
         public int Id_Consultorio { get; set; }
         public string Observacion { get; set; }
 

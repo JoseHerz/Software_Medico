@@ -18,6 +18,8 @@ namespace Software_Medico.Modelo
         public string Estado { get; set; }
         public int Id_Expediente { get; set; }
 
+        public int Id_Usuario { get; set; }
+
         public static DataTable GetFactura { get; set; }
 
     }

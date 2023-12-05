@@ -63,7 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\CitasControl.cs" />
     <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Controlador\ExamenControl.cs" />
+    <Compile Include="Controlador\ExpedienteControl.cs" />
+    <Compile Include="Controlador\FacturaControl.cs" />
+    <Compile Include="Controlador\MedicoControl.cs" />
+    <Compile Include="Controlador\OrderLabControl.cs" />
     <Compile Include="Controlador\PacienteControl.cs" />
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
