@@ -36,7 +36,7 @@ namespace Software_Medico.Vistas
         void Guardar()
         {
          
-            MedicoModel.Id_Medico = int.Parse(Txt_Codigo.Text);
+          
             MedicoModel.Primer_Nombre = Txt_Nombre1.Text;
             MedicoModel.Segundo_Nombre = Txt_Nombre2.Text;
             MedicoModel.Primer_Apellido = Txt_Apellido1.Text;
@@ -92,7 +92,7 @@ namespace Software_Medico.Vistas
         }
         void LimpiarTextBoxes()
         {
-            Txt_Codigo.Text = string.Empty;
+         
             Txt_Nombre1.Text = string.Empty;
             Txt_Nombre2.Text = string.Empty;
             Txt_Apellido1.Text = string.Empty;
@@ -110,12 +110,7 @@ namespace Software_Medico.Vistas
         {
             bool validacion = true;
 
-            if (string.IsNullOrEmpty(Txt_Codigo.Text))
-            {
-                MessageBox.Show("El Id no puede estar vacío");
-                Txt_Codigo.Focus();
-                return false;
-            }
+          
 
             if (string.IsNullOrEmpty(Txt_Nombre1.Text))
             {

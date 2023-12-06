@@ -23,7 +23,7 @@ namespace Software_Medico.Controlador
                     Con.Open();
                     string sql =
                         "Insert Into MEDICOS(" +
-                        "ID_MEDICO," +
+                       
                         "PRIMER_NOMBRE," +
                         "SEGUNDO_NOMBRE," +
                         "PRIMER_APELLIDO," +
@@ -33,9 +33,9 @@ namespace Software_Medico.Controlador
                         "ID_HORARIO," +
                         "TELEFONO," +
                         "ID_ESPECIALIDAD," +
-                        "SEXO," +
+                        "SEXO" +
                         ") select" +
-                        " '" + Modelo.Id_Medico + "'," +
+                     
                         " '" + Modelo.Primer_Nombre + "'," +
                         " '" + Modelo.Segundo_Nombre + "'," +
                         " '" + Modelo.Primer_Apellido + "'," +

@@ -74,6 +74,7 @@
     <Compile Include="Controlador\PacienteControl.cs" />
     <Compile Include="Controlador\PatologiaControl.cs" />
     <Compile Include="Controlador\ProductoControl.cs" />
+    <Compile Include="Controlador\UsuarioControl.cs" />
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +91,7 @@
     <Compile Include="Modelo\PacienteModel.cs" />
     <Compile Include="Modelo\PatologiasModel.cs" />
     <Compile Include="Modelo\ProductoModel.cs" />
+    <Compile Include="Modelo\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Aux_AgregarEnfermedad.cs">
