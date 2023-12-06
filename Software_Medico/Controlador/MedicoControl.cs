@@ -33,6 +33,7 @@ namespace Software_Medico.Controlador
                         "ID_HORARIO," +
                         "TELEFONO," +
                         "ID_ESPECIALIDAD," +
+                        "SEXO," +
                         ") select" +
                         " '" + Modelo.Id_Medico + "'," +
                         " '" + Modelo.Primer_Nombre + "'," +
@@ -43,7 +44,8 @@ namespace Software_Medico.Controlador
                         " '" + Modelo.Credenciales + "'," +
                         " '" + Modelo.Id_Horario + "'," +
                         " '" + Modelo.Telefono + "'," +
-                        " '" + Modelo.Id_Especialidad + "'";
+                        " '" + Modelo.Id_Especialidad + "'," +
+                        " '" + Modelo.Sexo + "'";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
@@ -88,6 +90,7 @@ namespace Software_Medico.Controlador
                         "ID_HORARIO =            '" + Modelo.Id_Horario + "'" +
                         "TELEFONO =              '" + Modelo.Telefono + "'" +
                         "ID_ESPECIALIDAD =       '" + Modelo.Id_Especialidad + "'" +
+                        "SEXO =                  '" + Modelo.Sexo + "'" +
                         " WHERE ID_MEDICO =      '" + Modelo.Id_Medico + "';";
 
 
@@ -167,7 +170,46 @@ namespace Software_Medico.Controlador
 
         }
 
+        public bool ValidMedico(MedicosModel Modelo)
+        {
+            bool existeDuplicado = false;
+            try
+            {
+                using (SqlConnection Con = new Conexion().GetConexion())
+                {
+                    Con.Open();
+                    string sql = "Select Count (*) from MEDICOS Where ID_MEDICO = @IdMedico or PRIMER_NOMBRE = @NomMedico";
 
+                    using (SqlCommand cmd = new SqlCommand(sql, Con))
+                    {
+                        cmd.Parameters.AddWithValue("@IdMedico", Modelo.Id_Medico);
+                        cmd.Parameters.AddWithValue("@NomMedico", Modelo.Primer_Nombre);
+                        int count = (int)cmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            existeDuplicado = true;
+                        }
+
+                    }
+
+                    Con.Close();
+
+
+                }
+
+                return existeDuplicado;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Existe duplicado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return existeDuplicado;
+            }
+
+
+
+        }
 
     }
 }

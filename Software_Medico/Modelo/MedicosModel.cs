@@ -19,6 +19,7 @@ namespace Software_Medico.Modelo
         public int Id_Horario { get; set; }
         public string Telefono { get; set; }
         public int Id_Especialidad { get; set; }
+        public string Sexo { get; set; }
 
 
 

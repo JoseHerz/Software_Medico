@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Controlador\CitasControl.cs" />
     <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Controlador\EspecialidadControl.cs" />
     <Compile Include="Controlador\ExamenControl.cs" />
     <Compile Include="Controlador\ExpedienteControl.cs" />
     <Compile Include="Controlador\FacturaControl.cs" />
@@ -80,6 +81,7 @@
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\CitasModel.cs" />
+    <Compile Include="Modelo\EspecialidadModel.cs" />
     <Compile Include="Modelo\ExamenModel.cs" />
     <Compile Include="Modelo\ExpedienteModel.cs" />
     <Compile Include="Modelo\FacturaModel.cs" />
