@@ -24,7 +24,7 @@ namespace Software_Medico.Controlador
                     string sql =
                         "Insert Into ESPECIALIDADES_MEDICAS(" +
                         "ID_ESPECIALIDAD," +
-                        "NOMBRE_ESPECIALIDAD," +
+                        "NOMBRE_ESPECIALIDAD" +
 
                         ") select" +
                         " '" + Modelo.Id_Especialidad + "'," +

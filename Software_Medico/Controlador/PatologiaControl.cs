@@ -25,7 +25,7 @@ namespace Software_Medico.Controlador
                         "Insert Into PATOLOGIAS(" +
                         "ID_PATOLOGIA," +
                         "NOMBRE_PATOLOGIA," +
-                        "DESCRIPCION_PATOLOGIA," +
+                        "DESCRIPCION_PATOLOGIA" +
                         ") select" +
                         " '" + Modelo.Id_Patologia + "'," +
                         " '" + Modelo.Nombre_Patologia + "'," +

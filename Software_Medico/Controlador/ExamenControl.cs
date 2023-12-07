@@ -24,7 +24,7 @@ namespace Software_Medico.Controlador
                         "Insert Into EXAMENES(" +
                         "ID_EXAMENES," +
                         "NOMBRE_EXAMEN," +
-                        "ESTATUS," +
+                        "ESTATUS" +
                         ") select" +
                         " '" + Modelo.Id_Examenes + "'," +
                         " '" + Modelo.Nombre_Examen + "'," +

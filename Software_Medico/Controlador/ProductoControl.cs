@@ -32,7 +32,7 @@ namespace Software_Medico.Controlador
                         "UBICACION," +
                         "ID_TIPO_INVENTARIO," +
                         "ESTATUS," +
-                        "INDICACIONES," +
+                        "INDICACIONES" +
                         ") select" +
                         " '" + Modelo.Id_Producto + "'," +
                         " '" + Modelo.Nombre_Producto + "'," +
