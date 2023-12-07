@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Software_Medico.Controlador;
+using Software_Medico.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,46 @@ namespace Software_Medico.Vistas
             //deshabilitar el boton enfermedades
             Btn_Enfermedades.Enabled = false;
         }
+
+
+        private void Dtg_Base_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new PatologiaControl().ListarPatologia();
+            Dtg_Base.DataSource = PatologiasModel.GetPatologia;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //funcionalidad de los botones minimizar, maximizar y cerrar.
         private void Frm_Enfermedades_Load(object sender, EventArgs e)
         {
@@ -101,6 +143,8 @@ namespace Software_Medico.Vistas
         {
             m = 0;
         }
+
+     
 
         private void Pnl_Barra_MouseDown(object sender, MouseEventArgs e)
         {

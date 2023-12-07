@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Software_Medico.Controlador;
+using Software_Medico.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,32 @@ namespace Software_Medico.Vistas
             InitializeComponent();
             Btn_Inventario.Enabled = false;
         }
+
+
+
+        private void Dtg_Base_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new ProductoControl().ListarProducto();
+            Dtg_Base.DataSource = ProductoModel.GetProducto;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //funcinalidad basica
         private void Frm_Inventariocs_Load(object sender, EventArgs e)
         {
@@ -93,6 +121,8 @@ namespace Software_Medico.Vistas
             Frm_Examenes frm_Examenes = new Frm_Examenes();
             frm_Examenes.Show();
         }
+
+    
 
         private void Btn_Facturacion_Click(object sender, EventArgs e)
         {

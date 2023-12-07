@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Software_Medico.Controlador;
+using Software_Medico.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,41 @@ namespace Software_Medico.Vistas
             InitializeComponent();
             Btn_Paciente.Enabled = false;
         }
+
+
+        private void Dtg_Base_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new PacienteControl().ListarPaciente();
+            Dtg_Base.DataSource = PacienteModel.GetPaciente;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //Funcionalidad basica
         private void Frm_Paciente_Load(object sender, EventArgs e)
         {
@@ -101,6 +138,8 @@ namespace Software_Medico.Vistas
             Frm_Facturacion frm_Facturacion = new Frm_Facturacion();
             frm_Facturacion.Show();
         }
+
+       
 
         private void Btn_Cita_Click(object sender, EventArgs e)
         {
