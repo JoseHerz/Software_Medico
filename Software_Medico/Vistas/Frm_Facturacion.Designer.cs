@@ -30,6 +30,7 @@
         {
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Btn_Cita = new System.Windows.Forms.Button();
             this.Btn_Facturacion = new System.Windows.Forms.Button();
             this.Btn_Inventario = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
-            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
@@ -77,6 +77,20 @@
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(102, 669);
             this.Pnl_Menu.TabIndex = 16;
+            // 
+            // Btn_Usuario
+            // 
+            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
+            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
+            this.Btn_Usuario.Location = new System.Drawing.Point(21, 575);
+            this.Btn_Usuario.Name = "Btn_Usuario";
+            this.Btn_Usuario.Size = new System.Drawing.Size(55, 74);
+            this.Btn_Usuario.TabIndex = 19;
+            this.Btn_Usuario.UseVisualStyleBackColor = true;
+            this.Btn_Usuario.Click += new System.EventHandler(this.Btn_Usuario_Click);
             // 
             // Btn_Cita
             // 
@@ -252,21 +266,6 @@
             this.Ptb_Resize.TabIndex = 4;
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
-            // 
-            // Btn_Usuario
-            // 
-            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
-            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
-            this.Btn_Usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Usuario.Location = new System.Drawing.Point(22, 576);
-            this.Btn_Usuario.Name = "Btn_Usuario";
-            this.Btn_Usuario.Size = new System.Drawing.Size(57, 74);
-            this.Btn_Usuario.TabIndex = 19;
-            this.Btn_Usuario.UseVisualStyleBackColor = true;
-            this.Btn_Usuario.Click += new System.EventHandler(this.Btn_Usuario_Click);
             // 
             // Frm_Facturacion
             // 

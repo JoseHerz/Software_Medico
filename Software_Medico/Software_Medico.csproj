@@ -75,6 +75,12 @@
     <Compile Include="Controlador\PatologiaControl.cs" />
     <Compile Include="Controlador\ProductoControl.cs" />
     <Compile Include="Controlador\UsuarioControl.cs" />
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="Vistas\Frm_Paciente.Designer.cs">
       <DependentUpon>Frm_Paciente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +305,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\8742318 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\apagado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
