@@ -209,9 +209,6 @@
     <EmbeddedResource Include="Vistas\Aux_Paciente.resx">
       <DependentUpon>Aux_Paciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Frm_Cita.resx">
-      <DependentUpon>Frm_Cita.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Doctores.resx">
       <DependentUpon>Frm_Doctores.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,9 +217,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Examenes.resx">
       <DependentUpon>Frm_Examenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Frm_Facturacion.resx">
-      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Inventario.resx">
       <DependentUpon>Frm_Inventario.cs</DependentUpon>

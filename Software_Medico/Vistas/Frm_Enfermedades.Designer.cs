@@ -34,8 +34,7 @@
             this.Btn_Buscar = new System.Windows.Forms.Button();
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
-            this.Pnl_Barra = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Btn_Cita = new System.Windows.Forms.Button();
             this.Btn_Facturacion = new System.Windows.Forms.Button();
             this.Btn_Inventario = new System.Windows.Forms.Button();
@@ -43,11 +42,12 @@
             this.Btn_Paciente = new System.Windows.Forms.Button();
             this.Btn_Doctores = new System.Windows.Forms.Button();
             this.Btn_Enfermedades = new System.Windows.Forms.Button();
+            this.Pnl_Barra = new System.Windows.Forms.Panel();
             this.Ptb_Max = new System.Windows.Forms.PictureBox();
             this.Ptb_Min = new System.Windows.Forms.PictureBox();
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
-            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Pnl_Formulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).BeginInit();
             this.Pnl_Menu.SuspendLayout();
@@ -99,6 +99,7 @@
             this.Btn_Agregar.TabIndex = 18;
             this.Btn_Agregar.Text = "Agregar Patologia";
             this.Btn_Agregar.UseVisualStyleBackColor = false;
+            this.Btn_Agregar.Click += new System.EventHandler(this.Btn_Agregar_Click);
             // 
             // Btn_Buscar
             // 
@@ -143,31 +144,18 @@
             this.Pnl_Menu.Size = new System.Drawing.Size(102, 683);
             this.Pnl_Menu.TabIndex = 14;
             // 
-            // Pnl_Barra
+            // Btn_Usuario
             // 
-            this.Pnl_Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.Pnl_Barra.Controls.Add(this.Ptb_Max);
-            this.Pnl_Barra.Controls.Add(this.Ptb_Min);
-            this.Pnl_Barra.Controls.Add(this.Ptb_Cerrar);
-            this.Pnl_Barra.Controls.Add(this.label1);
-            this.Pnl_Barra.Controls.Add(this.Ptb_Resize);
-            this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Barra.Name = "Pnl_Barra";
-            this.Pnl_Barra.Size = new System.Drawing.Size(1101, 40);
-            this.Pnl_Barra.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enfermedades";
+            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
+            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
+            this.Btn_Usuario.Location = new System.Drawing.Point(21, 574);
+            this.Btn_Usuario.Name = "Btn_Usuario";
+            this.Btn_Usuario.Size = new System.Drawing.Size(55, 74);
+            this.Btn_Usuario.TabIndex = 20;
+            this.Btn_Usuario.UseVisualStyleBackColor = true;
             // 
             // Btn_Cita
             // 
@@ -261,6 +249,23 @@
             this.Btn_Enfermedades.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Enfermedades.UseVisualStyleBackColor = true;
             // 
+            // Pnl_Barra
+            // 
+            this.Pnl_Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.Pnl_Barra.Controls.Add(this.Ptb_Max);
+            this.Pnl_Barra.Controls.Add(this.Ptb_Min);
+            this.Pnl_Barra.Controls.Add(this.Ptb_Cerrar);
+            this.Pnl_Barra.Controls.Add(this.label1);
+            this.Pnl_Barra.Controls.Add(this.Ptb_Resize);
+            this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Barra.Name = "Pnl_Barra";
+            this.Pnl_Barra.Size = new System.Drawing.Size(1101, 40);
+            this.Pnl_Barra.TabIndex = 13;
+            this.Pnl_Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseDown);
+            this.Pnl_Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseMove);
+            this.Pnl_Barra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseUp);
+            // 
             // Ptb_Max
             // 
             this.Ptb_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -271,6 +276,7 @@
             this.Ptb_Max.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Max.TabIndex = 3;
             this.Ptb_Max.TabStop = false;
+            this.Ptb_Max.Click += new System.EventHandler(this.Ptb_Max_Click);
             // 
             // Ptb_Min
             // 
@@ -282,6 +288,7 @@
             this.Ptb_Min.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Min.TabIndex = 2;
             this.Ptb_Min.TabStop = false;
+            this.Ptb_Min.Click += new System.EventHandler(this.Ptb_Min_Click);
             // 
             // Ptb_Cerrar
             // 
@@ -293,6 +300,19 @@
             this.Ptb_Cerrar.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Cerrar.TabIndex = 1;
             this.Ptb_Cerrar.TabStop = false;
+            this.Ptb_Cerrar.Click += new System.EventHandler(this.Ptb_Cerrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Enfermedades";
             // 
             // Ptb_Resize
             // 
@@ -304,19 +324,7 @@
             this.Ptb_Resize.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Resize.TabIndex = 4;
             this.Ptb_Resize.TabStop = false;
-            // 
-            // Btn_Usuario
-            // 
-            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
-            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
-            this.Btn_Usuario.Location = new System.Drawing.Point(21, 574);
-            this.Btn_Usuario.Name = "Btn_Usuario";
-            this.Btn_Usuario.Size = new System.Drawing.Size(55, 74);
-            this.Btn_Usuario.TabIndex = 20;
-            this.Btn_Usuario.UseVisualStyleBackColor = true;
+            this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
             // Frm_Enfermedades
             // 
