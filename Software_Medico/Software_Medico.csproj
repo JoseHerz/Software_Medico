@@ -218,6 +218,9 @@
     <EmbeddedResource Include="Vistas\Frm_Examenes.resx">
       <DependentUpon>Frm_Examenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Facturacion.resx">
+      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Inventario.resx">
       <DependentUpon>Frm_Inventario.cs</DependentUpon>
     </EmbeddedResource>

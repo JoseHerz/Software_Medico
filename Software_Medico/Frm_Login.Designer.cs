@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
             this.Btn_Huella = new System.Windows.Forms.Button();
-            this.Txt_Id = new System.Windows.Forms.TextBox();
+            this.Txt_Usuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_Guardar = new System.Windows.Forms.Button();
-            this.Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.Txt_Contraseña = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Pnl_Barra = new System.Windows.Forms.Panel();
             this.Ptb_Min = new System.Windows.Forms.PictureBox();
@@ -49,10 +50,10 @@
             // 
             this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
             this.Pnl_Formulario.Controls.Add(this.Btn_Huella);
-            this.Pnl_Formulario.Controls.Add(this.Txt_Id);
+            this.Pnl_Formulario.Controls.Add(this.Txt_Usuario);
             this.Pnl_Formulario.Controls.Add(this.label4);
             this.Pnl_Formulario.Controls.Add(this.Btn_Guardar);
-            this.Pnl_Formulario.Controls.Add(this.Txt_Nombre);
+            this.Pnl_Formulario.Controls.Add(this.Txt_Contraseña);
             this.Pnl_Formulario.Controls.Add(this.label2);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(0, 39);
@@ -64,21 +65,21 @@
             // Btn_Huella
             // 
             this.Btn_Huella.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Huella.Image = global::Software_Medico.Properties.Resources._8742318;
+            this.Btn_Huella.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Huella.Image")));
             this.Btn_Huella.Location = new System.Drawing.Point(68, 234);
             this.Btn_Huella.Name = "Btn_Huella";
             this.Btn_Huella.Size = new System.Drawing.Size(122, 109);
             this.Btn_Huella.TabIndex = 22;
             this.Btn_Huella.UseVisualStyleBackColor = false;
             // 
-            // Txt_Id
+            // Txt_Usuario
             // 
-            this.Txt_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Id.Location = new System.Drawing.Point(68, 90);
-            this.Txt_Id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Txt_Id.Name = "Txt_Id";
-            this.Txt_Id.Size = new System.Drawing.Size(377, 30);
-            this.Txt_Id.TabIndex = 21;
+            this.Txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Usuario.Location = new System.Drawing.Point(68, 90);
+            this.Txt_Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Usuario.Name = "Txt_Usuario";
+            this.Txt_Usuario.Size = new System.Drawing.Size(377, 30);
+            this.Txt_Usuario.TabIndex = 21;
             // 
             // label4
             // 
@@ -107,14 +108,14 @@
             this.Btn_Guardar.UseVisualStyleBackColor = false;
             this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
             // 
-            // Txt_Nombre
+            // Txt_Contraseña
             // 
-            this.Txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Nombre.Location = new System.Drawing.Point(68, 178);
-            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.Size = new System.Drawing.Size(377, 30);
-            this.Txt_Nombre.TabIndex = 1;
+            this.Txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Contraseña.Location = new System.Drawing.Point(68, 178);
+            this.Txt_Contraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Contraseña.Name = "Txt_Contraseña";
+            this.Txt_Contraseña.Size = new System.Drawing.Size(377, 30);
+            this.Txt_Contraseña.TabIndex = 1;
             // 
             // label2
             // 
@@ -144,7 +145,7 @@
             // 
             this.Ptb_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
-            this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
+            this.Ptb_Min.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Min.Image")));
             this.Ptb_Min.Location = new System.Drawing.Point(407, 2);
             this.Ptb_Min.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_Min.Name = "Ptb_Min";
@@ -156,7 +157,7 @@
             // 
             this.Ptb_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
+            this.Ptb_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Cerrar.Image")));
             this.Ptb_Cerrar.Location = new System.Drawing.Point(458, 2);
             this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_Cerrar.Name = "Ptb_Cerrar";
@@ -200,10 +201,10 @@
 
         private System.Windows.Forms.Panel Pnl_Formulario;
         private System.Windows.Forms.Button Btn_Huella;
-        private System.Windows.Forms.TextBox Txt_Id;
+        private System.Windows.Forms.TextBox Txt_Usuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Btn_Guardar;
-        private System.Windows.Forms.TextBox Txt_Nombre;
+        private System.Windows.Forms.TextBox Txt_Contraseña;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel Pnl_Barra;
         private System.Windows.Forms.PictureBox Ptb_Min;
