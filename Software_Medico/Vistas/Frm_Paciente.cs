@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Software_Medico.Vistas
 {
@@ -18,6 +20,10 @@ namespace Software_Medico.Vistas
         {
             InitializeComponent();
             Btn_Paciente.Enabled = false;
+            Chk_Examen.CheckedChanged += Chk_Examen_CheckedChanged;
+
+            
+            Cmb_Examen.Enabled = false;
         }
 
 
@@ -26,33 +32,6 @@ namespace Software_Medico.Vistas
             new PacienteControl().ListarPaciente();
             Dtg_Base.DataSource = PacienteModel.GetPaciente;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //Funcionalidad basica
         private void Frm_Paciente_Load(object sender, EventArgs e)
@@ -151,6 +130,7 @@ namespace Software_Medico.Vistas
             frm_LogOut.Show();
         }
 
+        
         private void Btn_Cita_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -164,5 +144,11 @@ namespace Software_Medico.Vistas
             Aux_Paciente aux_Paciente = new Aux_Paciente();
             aux_Paciente.Show();
         }
+
+        private void Chk_Examen_CheckedChanged(object sender, EventArgs e)
+        {
+            Cmb_Examen.Enabled = Chk_Examen.Checked;
+        }
+
     }
 }

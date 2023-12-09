@@ -79,7 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dtg_Base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtg_Base.Location = new System.Drawing.Point(159, 230);
+            this.Dtg_Base.Location = new System.Drawing.Point(159, 296);
             this.Dtg_Base.Name = "Dtg_Base";
             this.Dtg_Base.RowHeadersWidth = 51;
             this.Dtg_Base.RowTemplate.Height = 24;
@@ -93,7 +93,7 @@
             this.Btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Agregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Agregar.Location = new System.Drawing.Point(843, 103);
+            this.Btn_Agregar.Location = new System.Drawing.Point(832, 124);
             this.Btn_Agregar.Name = "Btn_Agregar";
             this.Btn_Agregar.Size = new System.Drawing.Size(138, 74);
             this.Btn_Agregar.TabIndex = 18;
@@ -108,7 +108,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Buscar.Location = new System.Drawing.Point(704, 115);
+            this.Btn_Buscar.Location = new System.Drawing.Point(693, 136);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(121, 50);
             this.Btn_Buscar.TabIndex = 17;
@@ -122,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_buscar.Location = new System.Drawing.Point(239, 124);
+            this.Txt_buscar.Location = new System.Drawing.Point(228, 145);
             this.Txt_buscar.Name = "Txt_buscar";
             this.Txt_buscar.Size = new System.Drawing.Size(444, 34);
             this.Txt_buscar.TabIndex = 16;
@@ -156,6 +156,7 @@
             this.Btn_Usuario.Size = new System.Drawing.Size(55, 74);
             this.Btn_Usuario.TabIndex = 20;
             this.Btn_Usuario.UseVisualStyleBackColor = true;
+            this.Btn_Usuario.Click += new System.EventHandler(this.Btn_Usuario_Click);
             // 
             // Btn_Cita
             // 
@@ -169,6 +170,7 @@
             this.Btn_Cita.Size = new System.Drawing.Size(73, 70);
             this.Btn_Cita.TabIndex = 6;
             this.Btn_Cita.UseVisualStyleBackColor = true;
+            this.Btn_Cita.Click += new System.EventHandler(this.Btn_Cita_Click);
             // 
             // Btn_Facturacion
             // 
@@ -182,6 +184,7 @@
             this.Btn_Facturacion.Size = new System.Drawing.Size(73, 70);
             this.Btn_Facturacion.TabIndex = 5;
             this.Btn_Facturacion.UseVisualStyleBackColor = true;
+            this.Btn_Facturacion.Click += new System.EventHandler(this.Btn_Facturacion_Click);
             // 
             // Btn_Inventario
             // 
@@ -195,6 +198,7 @@
             this.Btn_Inventario.Size = new System.Drawing.Size(73, 70);
             this.Btn_Inventario.TabIndex = 4;
             this.Btn_Inventario.UseVisualStyleBackColor = true;
+            this.Btn_Inventario.Click += new System.EventHandler(this.Btn_Inventario_Click);
             // 
             // Btn_Examenes
             // 
@@ -208,6 +212,7 @@
             this.Btn_Examenes.Size = new System.Drawing.Size(73, 70);
             this.Btn_Examenes.TabIndex = 3;
             this.Btn_Examenes.UseVisualStyleBackColor = true;
+            this.Btn_Examenes.Click += new System.EventHandler(this.Btn_Examenes_Click);
             // 
             // Btn_Paciente
             // 
@@ -221,6 +226,7 @@
             this.Btn_Paciente.Size = new System.Drawing.Size(73, 76);
             this.Btn_Paciente.TabIndex = 2;
             this.Btn_Paciente.UseVisualStyleBackColor = true;
+            this.Btn_Paciente.Click += new System.EventHandler(this.Btn_Paciente_Click);
             // 
             // Btn_Doctores
             // 
@@ -234,6 +240,7 @@
             this.Btn_Doctores.Size = new System.Drawing.Size(68, 73);
             this.Btn_Doctores.TabIndex = 1;
             this.Btn_Doctores.UseVisualStyleBackColor = true;
+            this.Btn_Doctores.Click += new System.EventHandler(this.Btn_Doctores_Click);
             // 
             // Btn_Enfermedades
             // 

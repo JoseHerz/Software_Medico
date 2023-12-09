@@ -15,6 +15,7 @@ namespace Software_Medico.Vistas
         public Frm_Enfermedades()
         {
             InitializeComponent();
+            Btn_Enfermedades.Enabled = false;
         }
         //funcionalidad de la pagina
         private void Ptb_Min_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace Software_Medico.Vistas
             m = 0;
         }
 
+        
         private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1)
@@ -68,5 +70,54 @@ namespace Software_Medico.Vistas
             Aux_AgregarEnfermedad aux_AgregarEnfermedad = new Aux_AgregarEnfermedad();
             aux_AgregarEnfermedad.Show();
         }
+
+        //funcionalidad de la barra de botones
+        private void Btn_Doctores_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_Paciente_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_Paciente frm_Paciente = new Frm_Paciente();
+            frm_Paciente.Show();
+        }
+
+        private void Btn_Examenes_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+            Frm_Examenes frm_Examenes = new Frm_Examenes();
+            frm_Examenes.Show();
+        }
+
+        private void Btn_Inventario_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_Inventario frm_Inventario = new Frm_Inventario();
+            frm_Inventario.Show();
+        }
+
+        private void Btn_Facturacion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_Facturacion frm_Facturacion = new Frm_Facturacion();
+            frm_Facturacion.Show();
+        }
+
+        private void Btn_Cita_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_Cita frm_Cita = new Frm_Cita();
+            frm_Cita.Show();
+        }
+
+        private void Btn_Usuario_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_LogOut frm_LogOut = new Frm_LogOut();
+            frm_LogOut.Show();
+        }
+
     }
 }
