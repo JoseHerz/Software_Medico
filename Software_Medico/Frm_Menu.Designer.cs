@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.Pnl_Barra = new System.Windows.Forms.Panel();
-            this.Ptb_Min = new System.Windows.Forms.PictureBox();
-            this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Pnl_Formulario = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Pnl_Contenedor = new System.Windows.Forms.Panel();
             this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Btn_Cita = new System.Windows.Forms.Button();
             this.Btn_Facturacion = new System.Windows.Forms.Button();
@@ -41,15 +42,14 @@
             this.Btn_Paciente = new System.Windows.Forms.Button();
             this.Btn_Doctores = new System.Windows.Forms.Button();
             this.Btn_Enfermedades = new System.Windows.Forms.Button();
-            this.Pnl_Formulario = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Pnl_Contenedor = new System.Windows.Forms.Panel();
+            this.Ptb_Min = new System.Windows.Forms.PictureBox();
+            this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.Pnl_Barra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).BeginInit();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Formulario.SuspendLayout();
             this.Pnl_Contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Barra
@@ -66,30 +66,6 @@
             this.Pnl_Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseDown);
             this.Pnl_Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseMove);
             this.Pnl_Barra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseUp);
-            // 
-            // Ptb_Min
-            // 
-            this.Ptb_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
-            this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
-            this.Ptb_Min.Location = new System.Drawing.Point(892, 3);
-            this.Ptb_Min.Name = "Ptb_Min";
-            this.Ptb_Min.Size = new System.Drawing.Size(45, 40);
-            this.Ptb_Min.TabIndex = 3;
-            this.Ptb_Min.TabStop = false;
-            this.Ptb_Min.Click += new System.EventHandler(this.Ptb_Min_Click);
-            // 
-            // Ptb_Cerrar
-            // 
-            this.Ptb_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
-            this.Ptb_Cerrar.Location = new System.Drawing.Point(943, 3);
-            this.Ptb_Cerrar.Name = "Ptb_Cerrar";
-            this.Ptb_Cerrar.Size = new System.Drawing.Size(45, 40);
-            this.Ptb_Cerrar.TabIndex = 1;
-            this.Ptb_Cerrar.TabStop = false;
-            this.Ptb_Cerrar.Click += new System.EventHandler(this.Ptb_Cerrar_Click);
             // 
             // label1
             // 
@@ -119,6 +95,41 @@
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(271, 627);
             this.Pnl_Menu.TabIndex = 1;
+            // 
+            // Pnl_Formulario
+            // 
+            this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
+            this.Pnl_Formulario.Controls.Add(this.label2);
+            this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_Formulario.Location = new System.Drawing.Point(271, 40);
+            this.Pnl_Formulario.Name = "Pnl_Formulario";
+            this.Pnl_Formulario.Size = new System.Drawing.Size(721, 627);
+            this.Pnl_Formulario.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Forte", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 239);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(648, 132);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Bienvenido!";
+            // 
+            // Pnl_Contenedor
+            // 
+            this.Pnl_Contenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Pnl_Contenedor.Controls.Add(this.Pnl_Formulario);
+            this.Pnl_Contenedor.Controls.Add(this.Pnl_Menu);
+            this.Pnl_Contenedor.Controls.Add(this.Pnl_Barra);
+            this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_Contenedor.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Contenedor.Name = "Pnl_Contenedor";
+            this.Pnl_Contenedor.Size = new System.Drawing.Size(992, 667);
+            this.Pnl_Contenedor.TabIndex = 0;
             // 
             // Btn_Usuario
             // 
@@ -249,40 +260,29 @@
             this.Btn_Enfermedades.UseVisualStyleBackColor = true;
             this.Btn_Enfermedades.Click += new System.EventHandler(this.Btn_Enfermedades_Click);
             // 
-            // Pnl_Formulario
+            // Ptb_Min
             // 
-            this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
-            this.Pnl_Formulario.Controls.Add(this.label2);
-            this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Formulario.Location = new System.Drawing.Point(271, 40);
-            this.Pnl_Formulario.Name = "Pnl_Formulario";
-            this.Pnl_Formulario.Size = new System.Drawing.Size(721, 627);
-            this.Pnl_Formulario.TabIndex = 2;
+            this.Ptb_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
+            this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
+            this.Ptb_Min.Location = new System.Drawing.Point(892, 3);
+            this.Ptb_Min.Name = "Ptb_Min";
+            this.Ptb_Min.Size = new System.Drawing.Size(45, 40);
+            this.Ptb_Min.TabIndex = 3;
+            this.Ptb_Min.TabStop = false;
+            this.Ptb_Min.Click += new System.EventHandler(this.Ptb_Min_Click);
             // 
-            // label2
+            // Ptb_Cerrar
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Forte", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 239);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(648, 132);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bienvenido!";
-            // 
-            // Pnl_Contenedor
-            // 
-            this.Pnl_Contenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Pnl_Contenedor.Controls.Add(this.Pnl_Formulario);
-            this.Pnl_Contenedor.Controls.Add(this.Pnl_Menu);
-            this.Pnl_Contenedor.Controls.Add(this.Pnl_Barra);
-            this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Contenedor.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Contenedor.Name = "Pnl_Contenedor";
-            this.Pnl_Contenedor.Size = new System.Drawing.Size(992, 667);
-            this.Pnl_Contenedor.TabIndex = 0;
+            this.Ptb_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
+            this.Ptb_Cerrar.Location = new System.Drawing.Point(943, 3);
+            this.Ptb_Cerrar.Name = "Ptb_Cerrar";
+            this.Ptb_Cerrar.Size = new System.Drawing.Size(45, 40);
+            this.Ptb_Cerrar.TabIndex = 1;
+            this.Ptb_Cerrar.TabStop = false;
+            this.Ptb_Cerrar.Click += new System.EventHandler(this.Ptb_Cerrar_Click);
             // 
             // Frm_Menu
             // 
@@ -296,12 +296,12 @@
             this.Text = "Frm_Menu";
             this.Pnl_Barra.ResumeLayout(false);
             this.Pnl_Barra.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).EndInit();
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Formulario.ResumeLayout(false);
             this.Pnl_Formulario.PerformLayout();
             this.Pnl_Contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
