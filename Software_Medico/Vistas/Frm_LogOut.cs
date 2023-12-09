@@ -16,5 +16,7 @@ namespace Software_Medico.Vistas
         {
             InitializeComponent();
         }
+
+        
     }
 }

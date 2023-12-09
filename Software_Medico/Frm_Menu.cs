@@ -133,7 +133,8 @@ namespace Software_Medico
 
         private void Btn_Usuario_Click(object sender, EventArgs e)
         {
-
+            Frm_LogOut frm_LogOut = new Frm_LogOut();
+            frm_LogOut.Show();
         }
 
         //Funcionalidad de la ventana

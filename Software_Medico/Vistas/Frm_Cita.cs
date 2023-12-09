@@ -96,6 +96,12 @@ namespace Software_Medico.Vistas
             frm_Paciente.Show();
         }
 
+        private void Btn_Usuario_Click(object sender, EventArgs e)
+        {
+            Frm_LogOut frm_LogOut = new Frm_LogOut();
+            frm_LogOut.Show();
+        }
+
         private void Btn_Inventario_Click(object sender, EventArgs e)
         {
             Frm_Inventario frm_Inventario = new Frm_Inventario();

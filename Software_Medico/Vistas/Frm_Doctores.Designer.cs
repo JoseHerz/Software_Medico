@@ -47,6 +47,7 @@
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Pnl_Formulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).BeginInit();
             this.Pnl_Menu.SuspendLayout();
@@ -65,10 +66,10 @@
             this.Pnl_Formulario.Controls.Add(this.Txt_buscar);
             this.Pnl_Formulario.Controls.Add(this.Dtg_Base);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Formulario.Location = new System.Drawing.Point(76, 32);
-            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Formulario.Location = new System.Drawing.Point(101, 39);
+            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
-            this.Pnl_Formulario.Size = new System.Drawing.Size(768, 532);
+            this.Pnl_Formulario.Size = new System.Drawing.Size(1024, 655);
             this.Pnl_Formulario.TabIndex = 11;
             // 
             // Btn_Agregar
@@ -78,10 +79,10 @@
             this.Btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Agregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Agregar.Location = new System.Drawing.Point(610, 50);
-            this.Btn_Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Agregar.Location = new System.Drawing.Point(813, 62);
+            this.Btn_Agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Agregar.Name = "Btn_Agregar";
-            this.Btn_Agregar.Size = new System.Drawing.Size(104, 60);
+            this.Btn_Agregar.Size = new System.Drawing.Size(139, 74);
             this.Btn_Agregar.TabIndex = 23;
             this.Btn_Agregar.Text = "Agregar Doctor";
             this.Btn_Agregar.UseVisualStyleBackColor = false;
@@ -94,10 +95,10 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Btn_Buscar.Location = new System.Drawing.Point(506, 59);
-            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Buscar.Location = new System.Drawing.Point(675, 73);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(91, 41);
+            this.Btn_Buscar.Size = new System.Drawing.Size(121, 50);
             this.Btn_Buscar.TabIndex = 22;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = false;
@@ -109,10 +110,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_buscar.Location = new System.Drawing.Point(83, 67);
-            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_buscar.Location = new System.Drawing.Point(111, 82);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_buscar.Name = "Txt_buscar";
-            this.Txt_buscar.Size = new System.Drawing.Size(408, 28);
+            this.Txt_buscar.Size = new System.Drawing.Size(543, 34);
             this.Txt_buscar.TabIndex = 21;
             // 
             // Dtg_Base
@@ -121,18 +122,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dtg_Base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtg_Base.Location = new System.Drawing.Point(11, 167);
-            this.Dtg_Base.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtg_Base.Location = new System.Drawing.Point(15, 206);
+            this.Dtg_Base.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dtg_Base.Name = "Dtg_Base";
             this.Dtg_Base.RowHeadersWidth = 51;
             this.Dtg_Base.RowTemplate.Height = 24;
-            this.Dtg_Base.Size = new System.Drawing.Size(744, 310);
+            this.Dtg_Base.Size = new System.Drawing.Size(992, 382);
             this.Dtg_Base.TabIndex = 20;
             this.Dtg_Base.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Base_CellContentClick);
             // 
             // Pnl_Menu
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.Pnl_Menu.Controls.Add(this.Btn_Usuario);
             this.Pnl_Menu.Controls.Add(this.Btn_Cita);
             this.Pnl_Menu.Controls.Add(this.Btn_Facturacion);
             this.Pnl_Menu.Controls.Add(this.Btn_Inventario);
@@ -141,10 +143,10 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Doctores);
             this.Pnl_Menu.Controls.Add(this.Btn_Enfermedades);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_Menu.Location = new System.Drawing.Point(0, 32);
-            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Menu.Location = new System.Drawing.Point(0, 39);
+            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(76, 532);
+            this.Pnl_Menu.Size = new System.Drawing.Size(101, 655);
             this.Pnl_Menu.TabIndex = 10;
             // 
             // Btn_Cita
@@ -154,10 +156,10 @@
             this.Btn_Cita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cita.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Cita.Image = global::Software_Medico.Properties.Resources.cita;
-            this.Btn_Cita.Location = new System.Drawing.Point(9, 406);
-            this.Btn_Cita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Cita.Location = new System.Drawing.Point(12, 500);
+            this.Btn_Cita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Cita.Name = "Btn_Cita";
-            this.Btn_Cita.Size = new System.Drawing.Size(55, 57);
+            this.Btn_Cita.Size = new System.Drawing.Size(73, 70);
             this.Btn_Cita.TabIndex = 6;
             this.Btn_Cita.UseVisualStyleBackColor = true;
             this.Btn_Cita.Click += new System.EventHandler(this.Btn_Cita_Click);
@@ -169,10 +171,10 @@
             this.Btn_Facturacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Facturacion.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Facturacion.Image = global::Software_Medico.Properties.Resources.cuenta;
-            this.Btn_Facturacion.Location = new System.Drawing.Point(9, 344);
-            this.Btn_Facturacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Facturacion.Location = new System.Drawing.Point(12, 423);
+            this.Btn_Facturacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Facturacion.Name = "Btn_Facturacion";
-            this.Btn_Facturacion.Size = new System.Drawing.Size(55, 57);
+            this.Btn_Facturacion.Size = new System.Drawing.Size(73, 70);
             this.Btn_Facturacion.TabIndex = 5;
             this.Btn_Facturacion.UseVisualStyleBackColor = true;
             this.Btn_Facturacion.Click += new System.EventHandler(this.Btn_Facturacion_Click);
@@ -184,10 +186,10 @@
             this.Btn_Inventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Inventario.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Inventario.Image = global::Software_Medico.Properties.Resources.inventario;
-            this.Btn_Inventario.Location = new System.Drawing.Point(9, 283);
-            this.Btn_Inventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Inventario.Location = new System.Drawing.Point(12, 348);
+            this.Btn_Inventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Inventario.Name = "Btn_Inventario";
-            this.Btn_Inventario.Size = new System.Drawing.Size(55, 57);
+            this.Btn_Inventario.Size = new System.Drawing.Size(73, 70);
             this.Btn_Inventario.TabIndex = 4;
             this.Btn_Inventario.UseVisualStyleBackColor = true;
             this.Btn_Inventario.Click += new System.EventHandler(this.Btn_Inventario_Click);
@@ -199,10 +201,10 @@
             this.Btn_Examenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Examenes.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Examenes.Image = global::Software_Medico.Properties.Resources.estetoscopio__1_;
-            this.Btn_Examenes.Location = new System.Drawing.Point(9, 221);
-            this.Btn_Examenes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Examenes.Location = new System.Drawing.Point(12, 272);
+            this.Btn_Examenes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Examenes.Name = "Btn_Examenes";
-            this.Btn_Examenes.Size = new System.Drawing.Size(55, 57);
+            this.Btn_Examenes.Size = new System.Drawing.Size(73, 70);
             this.Btn_Examenes.TabIndex = 3;
             this.Btn_Examenes.UseVisualStyleBackColor = true;
             this.Btn_Examenes.Click += new System.EventHandler(this.Btn_Examenes_Click);
@@ -214,10 +216,10 @@
             this.Btn_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Paciente.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Paciente.Image = global::Software_Medico.Properties.Resources.paciente;
-            this.Btn_Paciente.Location = new System.Drawing.Point(9, 154);
-            this.Btn_Paciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Paciente.Location = new System.Drawing.Point(12, 190);
+            this.Btn_Paciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Paciente.Name = "Btn_Paciente";
-            this.Btn_Paciente.Size = new System.Drawing.Size(55, 62);
+            this.Btn_Paciente.Size = new System.Drawing.Size(73, 76);
             this.Btn_Paciente.TabIndex = 2;
             this.Btn_Paciente.UseVisualStyleBackColor = true;
             this.Btn_Paciente.Click += new System.EventHandler(this.Btn_Paciente_Click);
@@ -229,10 +231,10 @@
             this.Btn_Doctores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Doctores.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Doctores.Image = global::Software_Medico.Properties.Resources.doctor;
-            this.Btn_Doctores.Location = new System.Drawing.Point(13, 90);
-            this.Btn_Doctores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Doctores.Location = new System.Drawing.Point(17, 111);
+            this.Btn_Doctores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Doctores.Name = "Btn_Doctores";
-            this.Btn_Doctores.Size = new System.Drawing.Size(51, 59);
+            this.Btn_Doctores.Size = new System.Drawing.Size(68, 73);
             this.Btn_Doctores.TabIndex = 1;
             this.Btn_Doctores.UseVisualStyleBackColor = true;
             // 
@@ -243,10 +245,10 @@
             this.Btn_Enfermedades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Enfermedades.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Enfermedades.Image = global::Software_Medico.Properties.Resources.prevencion;
-            this.Btn_Enfermedades.Location = new System.Drawing.Point(9, 25);
-            this.Btn_Enfermedades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Enfermedades.Location = new System.Drawing.Point(12, 31);
+            this.Btn_Enfermedades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Enfermedades.Name = "Btn_Enfermedades";
-            this.Btn_Enfermedades.Size = new System.Drawing.Size(55, 60);
+            this.Btn_Enfermedades.Size = new System.Drawing.Size(73, 74);
             this.Btn_Enfermedades.TabIndex = 0;
             this.Btn_Enfermedades.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Enfermedades.UseVisualStyleBackColor = true;
@@ -262,9 +264,9 @@
             this.Pnl_Barra.Controls.Add(this.Ptb_Resize);
             this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pnl_Barra.Name = "Pnl_Barra";
-            this.Pnl_Barra.Size = new System.Drawing.Size(844, 32);
+            this.Pnl_Barra.Size = new System.Drawing.Size(1125, 39);
             this.Pnl_Barra.TabIndex = 9;
             this.Pnl_Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseDown);
             this.Pnl_Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseMove);
@@ -275,10 +277,10 @@
             this.Ptb_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Max.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Max.Image = global::Software_Medico.Properties.Resources.maximizar__1_;
-            this.Ptb_Max.Location = new System.Drawing.Point(760, 2);
-            this.Ptb_Max.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Max.Location = new System.Drawing.Point(1013, 2);
+            this.Ptb_Max.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_Max.Name = "Ptb_Max";
-            this.Ptb_Max.Size = new System.Drawing.Size(34, 32);
+            this.Ptb_Max.Size = new System.Drawing.Size(45, 39);
             this.Ptb_Max.TabIndex = 3;
             this.Ptb_Max.TabStop = false;
             this.Ptb_Max.Click += new System.EventHandler(this.Ptb_Max_Click);
@@ -288,10 +290,10 @@
             this.Ptb_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
-            this.Ptb_Min.Location = new System.Drawing.Point(722, 2);
-            this.Ptb_Min.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Min.Location = new System.Drawing.Point(963, 2);
+            this.Ptb_Min.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_Min.Name = "Ptb_Min";
-            this.Ptb_Min.Size = new System.Drawing.Size(34, 32);
+            this.Ptb_Min.Size = new System.Drawing.Size(45, 39);
             this.Ptb_Min.TabIndex = 2;
             this.Ptb_Min.TabStop = false;
             this.Ptb_Min.Click += new System.EventHandler(this.Ptb_Min_Click);
@@ -301,10 +303,10 @@
             this.Ptb_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
-            this.Ptb_Cerrar.Location = new System.Drawing.Point(798, 2);
-            this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Cerrar.Location = new System.Drawing.Point(1064, 2);
+            this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_Cerrar.Name = "Ptb_Cerrar";
-            this.Ptb_Cerrar.Size = new System.Drawing.Size(34, 32);
+            this.Ptb_Cerrar.Size = new System.Drawing.Size(45, 39);
             this.Ptb_Cerrar.TabIndex = 1;
             this.Ptb_Cerrar.TabStop = false;
             this.Ptb_Cerrar.Click += new System.EventHandler(this.Ptb_Cerrar_Click);
@@ -315,10 +317,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 20);
+            this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Doctores";
             // 
@@ -327,24 +328,39 @@
             this.Ptb_Resize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Resize.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Resize.Image = global::Software_Medico.Properties.Resources.minimizar__1___1_;
-            this.Ptb_Resize.Location = new System.Drawing.Point(760, 2);
-            this.Ptb_Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Resize.Location = new System.Drawing.Point(1013, 2);
+            this.Ptb_Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ptb_Resize.Name = "Ptb_Resize";
-            this.Ptb_Resize.Size = new System.Drawing.Size(34, 32);
+            this.Ptb_Resize.Size = new System.Drawing.Size(45, 39);
             this.Ptb_Resize.TabIndex = 4;
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
+            // Btn_Usuario
+            // 
+            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
+            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
+            this.Btn_Usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Usuario.Location = new System.Drawing.Point(19, 562);
+            this.Btn_Usuario.Name = "Btn_Usuario";
+            this.Btn_Usuario.Size = new System.Drawing.Size(57, 74);
+            this.Btn_Usuario.TabIndex = 19;
+            this.Btn_Usuario.UseVisualStyleBackColor = true;
+            this.Btn_Usuario.Click += new System.EventHandler(this.Btn_Usuario_Click);
+            // 
             // Frm_Doctores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 564);
+            this.ClientSize = new System.Drawing.Size(1125, 694);
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.Pnl_Menu);
             this.Controls.Add(this.Pnl_Barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_Doctores";
             this.Text = "Frm_Doctores";
             this.Load += new System.EventHandler(this.Frm_Doctores_Load);
@@ -383,5 +399,6 @@
         private System.Windows.Forms.Button Btn_Agregar;
         private System.Windows.Forms.Button Btn_Buscar;
         private System.Windows.Forms.TextBox Txt_buscar;
+        private System.Windows.Forms.Button Btn_Usuario;
     }
 }

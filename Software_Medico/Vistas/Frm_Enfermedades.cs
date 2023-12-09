@@ -99,6 +99,12 @@ namespace Software_Medico.Vistas
             frm_Doctores.Show();
         }
 
+        private void Btn_Usuario_Click(object sender, EventArgs e)
+        {
+            Frm_LogOut frm_LogOut = new Frm_LogOut();
+            frm_LogOut.Show();
+        }
+
         private void Btn_Paciente_Click(object sender, EventArgs e)
         {
             Frm_Paciente frm_Paciente = new Frm_Paciente();
@@ -143,8 +149,6 @@ namespace Software_Medico.Vistas
         {
             m = 0;
         }
-
-     
 
         private void Pnl_Barra_MouseDown(object sender, MouseEventArgs e)
         {

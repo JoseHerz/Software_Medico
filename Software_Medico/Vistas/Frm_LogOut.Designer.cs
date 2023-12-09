@@ -43,6 +43,7 @@
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
@@ -63,6 +64,7 @@
             // Pnl_Menu
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.Pnl_Menu.Controls.Add(this.Btn_Usuario);
             this.Pnl_Menu.Controls.Add(this.Btn_Cita);
             this.Pnl_Menu.Controls.Add(this.Btn_Facturacion);
             this.Pnl_Menu.Controls.Add(this.Btn_Inventario);
@@ -238,6 +240,20 @@
             this.Ptb_Resize.TabIndex = 4;
             this.Ptb_Resize.TabStop = false;
             // 
+            // Btn_Usuario
+            // 
+            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
+            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
+            this.Btn_Usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Usuario.Location = new System.Drawing.Point(21, 572);
+            this.Btn_Usuario.Name = "Btn_Usuario";
+            this.Btn_Usuario.Size = new System.Drawing.Size(57, 74);
+            this.Btn_Usuario.TabIndex = 19;
+            this.Btn_Usuario.UseVisualStyleBackColor = true;
+            // 
             // Frm_LogOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,5 +293,6 @@
         private System.Windows.Forms.PictureBox Ptb_Cerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Ptb_Resize;
+        private System.Windows.Forms.Button Btn_Usuario;
     }
 }

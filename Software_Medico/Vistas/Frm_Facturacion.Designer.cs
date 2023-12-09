@@ -43,6 +43,7 @@
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
@@ -57,12 +58,13 @@
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(102, 40);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
-            this.Pnl_Formulario.Size = new System.Drawing.Size(1007, 595);
+            this.Pnl_Formulario.Size = new System.Drawing.Size(1007, 669);
             this.Pnl_Formulario.TabIndex = 17;
             // 
             // Pnl_Menu
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.Pnl_Menu.Controls.Add(this.Btn_Usuario);
             this.Pnl_Menu.Controls.Add(this.Btn_Cita);
             this.Pnl_Menu.Controls.Add(this.Btn_Facturacion);
             this.Pnl_Menu.Controls.Add(this.Btn_Inventario);
@@ -73,7 +75,7 @@
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 40);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(102, 595);
+            this.Pnl_Menu.Size = new System.Drawing.Size(102, 669);
             this.Pnl_Menu.TabIndex = 16;
             // 
             // Btn_Cita
@@ -251,11 +253,26 @@
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
+            // Btn_Usuario
+            // 
+            this.Btn_Usuario.FlatAppearance.BorderSize = 0;
+            this.Btn_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Usuario.Image = global::Software_Medico.Properties.Resources.programador1;
+            this.Btn_Usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Usuario.Location = new System.Drawing.Point(22, 576);
+            this.Btn_Usuario.Name = "Btn_Usuario";
+            this.Btn_Usuario.Size = new System.Drawing.Size(57, 74);
+            this.Btn_Usuario.TabIndex = 19;
+            this.Btn_Usuario.UseVisualStyleBackColor = true;
+            this.Btn_Usuario.Click += new System.EventHandler(this.Btn_Usuario_Click);
+            // 
             // Frm_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 635);
+            this.ClientSize = new System.Drawing.Size(1109, 709);
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.Pnl_Menu);
             this.Controls.Add(this.Pnl_Barra);
@@ -290,5 +307,6 @@
         private System.Windows.Forms.PictureBox Ptb_Cerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Ptb_Resize;
+        private System.Windows.Forms.Button Btn_Usuario;
     }
 }
