@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Software_Medico.Vistas
 {
-    public partial class Frm_Enfermedades : Form
+    public partial class Frm_Login : Form
     {
-        public Frm_Enfermedades()
+        public Frm_Login()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Login_Click(object sender, EventArgs e)
+        {
+            Frm_Menu frm_Menu = new Frm_Menu();
+            frm_Menu.Show();
+
+            this.Hide();
         }
     }
 }

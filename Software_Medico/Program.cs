@@ -17,8 +17,8 @@ namespace Software_Medico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Frm_Menu());
-            Application.Run(new Aux_AgregarEnfermedad());
+            Application.Run(new Frm_Login());
         }
     }
-}
+    }
+

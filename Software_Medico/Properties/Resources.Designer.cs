@@ -83,6 +83,16 @@ namespace Software_Medico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap apagado {
+            get {
+                object obj = ResourceManager.GetObject("apagado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar_sesion__1_ {
             get {
                 object obj = ResourceManager.GetObject("cerrar-sesion (1)", resourceCulture);
