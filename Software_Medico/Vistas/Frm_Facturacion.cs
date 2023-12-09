@@ -15,7 +15,6 @@ namespace Software_Medico.Vistas
         public Frm_Facturacion()
         {
             InitializeComponent();
-            Btn_Facturacion.Enabled = false;
         }
 
         //funcionalidad basica
