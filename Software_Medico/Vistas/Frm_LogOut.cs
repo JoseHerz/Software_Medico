@@ -35,7 +35,6 @@ namespace Software_Medico.Vistas
         private void Btn_Enfermedades_Click(object sender, EventArgs e)
         {
             this.Close();   
-
             Frm_Enfermedades frm_Enfermedades = new Frm_Enfermedades();
             frm_Enfermedades.Show();
         }

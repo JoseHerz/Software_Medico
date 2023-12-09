@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Cmb_Medicamento = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Chk_Examen = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Cmb_Examen = new System.Windows.Forms.ComboBox();
-            this.Cmb_NPatologia = new System.Windows.Forms.ComboBox();
             this.Btn_Agregar = new System.Windows.Forms.Button();
             this.Btn_Buscar = new System.Windows.Forms.Button();
             this.Txt_buscar = new System.Windows.Forms.TextBox();
@@ -55,6 +48,13 @@
             this.Ptb_Min = new System.Windows.Forms.PictureBox();
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Cmb_Examen = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Chk_Examen = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Cmb_Medicamento = new System.Windows.Forms.ComboBox();
+            this.Cmb_NPatologia = new System.Windows.Forms.ComboBox();
             this.Pnl_Formulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).BeginInit();
             this.Pnl_Menu.SuspendLayout();
@@ -85,75 +85,6 @@
             this.Pnl_Formulario.Name = "Pnl_Formulario";
             this.Pnl_Formulario.Size = new System.Drawing.Size(1073, 714);
             this.Pnl_Formulario.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(514, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 25);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Receta";
-            // 
-            // Cmb_Medicamento
-            // 
-            this.Cmb_Medicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Medicamento.FormattingEnabled = true;
-            this.Cmb_Medicamento.Location = new System.Drawing.Point(611, 167);
-            this.Cmb_Medicamento.Name = "Cmb_Medicamento";
-            this.Cmb_Medicamento.Size = new System.Drawing.Size(250, 33);
-            this.Cmb_Medicamento.TabIndex = 33;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 25);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Examen";
-            // 
-            // Chk_Examen
-            // 
-            this.Chk_Examen.AutoSize = true;
-            this.Chk_Examen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chk_Examen.Location = new System.Drawing.Point(481, 119);
-            this.Chk_Examen.Name = "Chk_Examen";
-            this.Chk_Examen.Size = new System.Drawing.Size(106, 29);
-            this.Chk_Examen.TabIndex = 31;
-            this.Chk_Examen.Text = "Examen";
-            this.Chk_Examen.UseVisualStyleBackColor = true;
-            this.Chk_Examen.CheckedChanged += new System.EventHandler(this.Chk_Examen_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 25);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Enfermedad";
-            // 
-            // Cmb_Examen
-            // 
-            this.Cmb_Examen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Examen.FormattingEnabled = true;
-            this.Cmb_Examen.Location = new System.Drawing.Point(209, 162);
-            this.Cmb_Examen.Name = "Cmb_Examen";
-            this.Cmb_Examen.Size = new System.Drawing.Size(250, 33);
-            this.Cmb_Examen.TabIndex = 29;
-            // 
-            // Cmb_NPatologia
-            // 
-            this.Cmb_NPatologia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_NPatologia.FormattingEnabled = true;
-            this.Cmb_NPatologia.Location = new System.Drawing.Point(209, 119);
-            this.Cmb_NPatologia.Name = "Cmb_NPatologia";
-            this.Cmb_NPatologia.Size = new System.Drawing.Size(250, 33);
-            this.Cmb_NPatologia.TabIndex = 28;
             // 
             // Btn_Agregar
             // 
@@ -205,12 +136,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dtg_Base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtg_Base.Location = new System.Drawing.Point(23, 423);
+            this.Dtg_Base.Location = new System.Drawing.Point(23, 272);
             this.Dtg_Base.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dtg_Base.Name = "Dtg_Base";
             this.Dtg_Base.RowHeadersWidth = 51;
             this.Dtg_Base.RowTemplate.Height = 24;
-            this.Dtg_Base.Size = new System.Drawing.Size(1033, 277);
+            this.Dtg_Base.Size = new System.Drawing.Size(1033, 428);
             this.Dtg_Base.TabIndex = 24;
             this.Dtg_Base.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Base_CellContentClick);
             // 
@@ -433,6 +364,75 @@
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(514, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 25);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Receta";
+            // 
+            // Cmb_Examen
+            // 
+            this.Cmb_Examen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_Examen.FormattingEnabled = true;
+            this.Cmb_Examen.Location = new System.Drawing.Point(209, 162);
+            this.Cmb_Examen.Name = "Cmb_Examen";
+            this.Cmb_Examen.Size = new System.Drawing.Size(250, 33);
+            this.Cmb_Examen.TabIndex = 29;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Enfermedad";
+            // 
+            // Chk_Examen
+            // 
+            this.Chk_Examen.AutoSize = true;
+            this.Chk_Examen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chk_Examen.Location = new System.Drawing.Point(481, 119);
+            this.Chk_Examen.Name = "Chk_Examen";
+            this.Chk_Examen.Size = new System.Drawing.Size(106, 29);
+            this.Chk_Examen.TabIndex = 31;
+            this.Chk_Examen.Text = "Examen";
+            this.Chk_Examen.UseVisualStyleBackColor = true;
+            this.Chk_Examen.CheckedChanged += new System.EventHandler(this.Chk_Examen_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(98, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 25);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Examen";
+            // 
+            // Cmb_Medicamento
+            // 
+            this.Cmb_Medicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_Medicamento.FormattingEnabled = true;
+            this.Cmb_Medicamento.Location = new System.Drawing.Point(611, 167);
+            this.Cmb_Medicamento.Name = "Cmb_Medicamento";
+            this.Cmb_Medicamento.Size = new System.Drawing.Size(250, 33);
+            this.Cmb_Medicamento.TabIndex = 33;
+            // 
+            // Cmb_NPatologia
+            // 
+            this.Cmb_NPatologia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_NPatologia.FormattingEnabled = true;
+            this.Cmb_NPatologia.Location = new System.Drawing.Point(209, 119);
+            this.Cmb_NPatologia.Name = "Cmb_NPatologia";
+            this.Cmb_NPatologia.Size = new System.Drawing.Size(250, 33);
+            this.Cmb_NPatologia.TabIndex = 28;
+            // 
             // Frm_Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,12 +482,12 @@
         private System.Windows.Forms.TextBox Txt_buscar;
         private System.Windows.Forms.DataGridView Dtg_Base;
         private System.Windows.Forms.Button Btn_Usuario;
-        private System.Windows.Forms.ComboBox Cmb_Examen;
-        private System.Windows.Forms.ComboBox Cmb_NPatologia;
-        private System.Windows.Forms.CheckBox Chk_Examen;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox Cmb_Medicamento;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox Chk_Examen;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox Cmb_Examen;
+        private System.Windows.Forms.ComboBox Cmb_NPatologia;
     }
 }

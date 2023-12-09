@@ -168,17 +168,6 @@ namespace Software_Medico
             mx = e.X;
             my = e.Y;
         }
-        
-        
-            //Prueba de conexion, esta solo se genera un boton y se pone dicho codigo
-            //instancia de clase conexion
-            //SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString); 
-            
-            //conexion.Open();
-
-            //MessageBox.Show("Conexion exitosa");
-
-            //conexion.Close();
-        
+       
     }
 }

@@ -255,6 +255,7 @@
             this.Btn_Enfermedades.TabIndex = 0;
             this.Btn_Enfermedades.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Enfermedades.UseVisualStyleBackColor = true;
+            this.Btn_Enfermedades.Click += new System.EventHandler(this.Btn_Enfermedades_Click);
             // 
             // Pnl_Barra
             // 

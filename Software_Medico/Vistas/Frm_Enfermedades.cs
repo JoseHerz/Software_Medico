@@ -105,6 +105,14 @@ namespace Software_Medico.Vistas
             frm_Facturacion.Show();
         }
 
+        private void Btn_Enfermedades_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frm_Enfermedades frm_Enfermedades = new Frm_Enfermedades();
+            frm_Enfermedades.Show();
+
+        }
+
         private void Btn_Cita_Click(object sender, EventArgs e)
         {
             this.Close();
