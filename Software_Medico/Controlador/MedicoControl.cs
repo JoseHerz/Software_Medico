@@ -229,6 +229,35 @@ namespace Software_Medico.Controlador
         }
 
 
+        public void ListarMedico2(int idpac)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection Con = new Conexion().GetConexion())
+                {
+                    Con.Open();
+
+                    string sql = "SELECT m.ID_MEDICO,CONCAT(m.PRIMER_NOMBRE,' ',m.PRIMER_APELLIDO) AS NOMBRE,us.CORREO_ELECTRONICO AS CORREO,m.CREDENCIALES,h.DESCRIPCION as HORARIO,m.TELEFONO,es.NOMBRE_ESPECIALIDAD AS ESPECIALIDAD FROM MEDICOS m INNER JOIN USUARIOS us ON m.ID_USUARIO = us.ID_USUARIO INNER JOIN HORARIOS h ON m.ID_HORARIO = h.ID_HORARIO INNER JOIN ESPECIALIDADES_MEDICAS es ON m.ID_ESPECIALIDAD = es.ID_ESPECIALIDAD where m.ID_MEDICO = @idpac";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, Con))
+                    {
+                        cmd.Parameters.AddWithValue("@idpac", idpac);
+
+                        SqlDataAdapter adaptador = new SqlDataAdapter(cmd); // Utiliza el comando cmd en lugar de la cadena sql
+                        adaptador.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            MedicosModel.GetMedico = dt;
+
+        }
+
 
 
     }

@@ -14,6 +14,9 @@ namespace Software_Medico.Vistas
 {
     public partial class Frm_Doctores : Form
     {
+        MedicoControl cc = new MedicoControl();
+        MedicosModel MedicosModel = new MedicosModel();
+
         public Frm_Doctores()
         {
             InitializeComponent();
@@ -24,11 +27,15 @@ namespace Software_Medico.Vistas
 
         private void Dtg_Base_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            new MedicoControl().ListarMedico();
-            Dtg_Base.DataSource = MedicosModel.GetMedico;
+            //new MedicoControl().ListarMedico();
+            //Dtg_Base.DataSource = MedicosModel.GetMedico;
         }
 
-
+        private void Btn_Buscar_Click(object sender, EventArgs e)
+        {
+            cc.ListarMedico2(int.Parse(Txt_buscar.Text));
+            Dtg_Base.DataSource = MedicosModel.GetMedico;
+        }
 
 
 
@@ -152,6 +159,8 @@ namespace Software_Medico.Vistas
             Frm_LogOut frm_LogOut = new Frm_LogOut();
             frm_LogOut.Show();
         }
+
+       
 
         private void Btn_Cita_Click(object sender, EventArgs e)
         {
