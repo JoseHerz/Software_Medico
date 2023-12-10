@@ -252,5 +252,65 @@ namespace Software_Medico.Controlador
         }
 
 
+        public DataTable CargarClinicaCMB()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "Select ID_CLINICA,NOMBRE_CLINICA from CLINICA ";
+
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
+
+        public DataTable CargarConsultorioCMB(int idcli)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "SELECT C.ID_CONSULTORIO, C.NOMBRE_CONSULTORIO FROM CONSULTORIO C JOIN CLINICA CL ON C.ID_CLINICA = CL.ID_CLINICA WHERE CL.ID_CLINICA = @idclin;";
+            using (SqlCommand cmd = new SqlCommand(sql, Con))
+            {
+                cmd.Parameters.AddWithValue("@idclin", idcli);
+            }
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
+
+        public DataTable CargarDoctorCMB()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "Select ID_ESPECIALIDAD,NOMBRE_ESPECIALIDAD from ESPECIALIDADES_MEDICAS ";
+
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }
