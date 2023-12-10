@@ -163,7 +163,8 @@ namespace Software_Medico.Vistas
         //funcionalidad del sistema
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //Frm_Menu Frm_Menu = new Frm_Menu();
+            //Frm_Menu.Close();
             Aux_Doctor aux_Doctor = new Aux_Doctor();
             aux_Doctor.Show();
         }
