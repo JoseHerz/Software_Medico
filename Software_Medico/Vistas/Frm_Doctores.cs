@@ -16,11 +16,13 @@ namespace Software_Medico.Vistas
     {
         MedicoControl cc = new MedicoControl();
         MedicosModel MedicosModel = new MedicosModel();
+        
 
         public Frm_Doctores()
         {
             InitializeComponent();
             Btn_Doctores.Enabled = false;
+            Btn_Eliminar.Enabled = false;
         }
 
 
@@ -36,31 +38,6 @@ namespace Software_Medico.Vistas
             cc.ListarMedico2(int.Parse(Txt_buscar.Text));
             Dtg_Base.DataSource = MedicosModel.GetMedico;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -160,8 +137,7 @@ namespace Software_Medico.Vistas
             frm_LogOut.Show();
         }
 
-       
-
+        
         private void Btn_Cita_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -169,11 +145,46 @@ namespace Software_Medico.Vistas
             frm_Cita.Show();
         }
 
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            EliminarRegistro();
+        }
+
+        private void Dtg_Base_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Btn_Eliminar.Enabled = true;
+        }
+
         //funcionalidad del sistema
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
             Aux_Doctor aux_Doctor = new Aux_Doctor();
             aux_Doctor.Show();
+        }
+
+        
+
+        void EliminarRegistro()
+        {
+            if (MessageBox.Show("Esta seguro de eliminar este registro??", "Informacion del Sistema", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                MedicosModel = new MedicosModel();
+                MedicosModel.Id_Medico = int.Parse(Dtg_Base.SelectedCells[0].Value.ToString());
+                if (new MedicoControl().EliminarMedico(MedicosModel) == true)
+                {
+
+                    MessageBox.Show("Registro Eliminado Exitosamente...");
+
+                }
+                else
+                {
+                    MessageBox.Show("Error al tratar de eliminar el registro");
+                }
+
+            }
+            Btn_Eliminar.Enabled = false;
+
+
         }
     }
 }
