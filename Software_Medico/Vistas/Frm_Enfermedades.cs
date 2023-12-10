@@ -75,6 +75,8 @@ namespace Software_Medico.Vistas
         private void Btn_Doctores_Click(object sender, EventArgs e)
         {
             this.Close();
+            Frm_Doctores frm_Doctores = new Frm_Doctores();
+            frm_Doctores.Show();
         }
 
         private void Btn_Paciente_Click(object sender, EventArgs e)
