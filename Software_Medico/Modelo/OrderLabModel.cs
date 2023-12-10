@@ -10,7 +10,7 @@ namespace Software_Medico.Modelo
     internal class OrderLabModel
     {
 
-      // public int Id_Orden_Laboratorio { get; set; }
+        public int Id_Orden_Laboratorio { get; set; }
         public int Id_Paciente { get; set; }
         public int Id_Expediente { get; set; }
         public int Id_Medico { get; set; }
