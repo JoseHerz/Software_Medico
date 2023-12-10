@@ -276,9 +276,9 @@ namespace Software_Medico.Controlador
                                 Modelo.Nombre = Datos.GetString(Datos.GetOrdinal("NOMBRE"));
                                 Modelo.Apellido = Datos.GetString(Datos.GetOrdinal("APELLIDO"));
                                 Modelo.Clave = Datos.GetString(Datos.GetOrdinal("CLAVE"));
-                                Modelo.Id_Usuario_Rol = Datos.GetInt32(Datos.GetOrdinal("ROL"));
+                                Modelo.Id_Usuario_Rol = Datos.GetInt32(Datos.GetOrdinal("ID_USUARIO_ROL"));
                                 Modelo.Correo_Electronico = Datos.GetString(Datos.GetOrdinal("CORREO_ELECTRONICO"));
-                                Modelo.Estatus = Datos.GetBoolean(Datos.GetOrdinal("ACTIVO"));
+                                Modelo.Estatus = Datos.GetBoolean(Datos.GetOrdinal("ESTATUS"));
                               
 
                             }

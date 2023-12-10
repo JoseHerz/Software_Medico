@@ -1,4 +1,5 @@
-﻿using Software_Medico.Controlador;
+﻿using DPFP;
+using Software_Medico.Controlador;
 using Software_Medico.Modelo;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace Software_Medico.Vistas
         UsuarioModel UsuarioModel = new UsuarioModel();
         UsuarioControl UsuarioControl = new UsuarioControl();
         bool valideditar = false;
+        private DPFP.Template Template;
 
         public Aux_AgregarUsuario()
         {
@@ -137,9 +139,38 @@ namespace Software_Medico.Vistas
             this.Close();
         }
 
+        void AgregarHuella()
+        {
+            AgregandoHuella Reg = new AgregandoHuella();
+            Reg.OnTemplate += this.OnTemplate;
+            Reg.ShowDialog();
+        }
+
+        private void OnTemplate(DPFP.Template template)
+        {
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+
+                if (Template != null)
+                {
+                    lblMensaje.Text = "Huella Capturada Exitosamente";
+                    lblMensaje.ForeColor = Color.Green;
+
+                    //new UsuarioControl().ActualizaHuellaUsuarios(.Text, Template);
+
+                }
+                else
+                {
+                    lblMensaje.Text = "Huella no Capturada";
+                    lblMensaje.ForeColor = Color.Red;
+                }
+
+            }));
+        }
         private void Btn_Huella_Click(object sender, EventArgs e)
         {
-           // AgregandoHuella();   
+           AgregarHuella();   
         }
     }
 }
