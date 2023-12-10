@@ -1,6 +1,4 @@
-﻿using Software_Medico.Controlador;
-using Software_Medico.Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,37 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Software_Medico.Vistas
 {
-    public partial class Frm_Paciente : Form
+    public partial class Frm_VDocPaciente : Form
     {
-        public Frm_Paciente()
+        public Frm_VDocPaciente()
         {
             InitializeComponent();
-            Btn_Paciente.Enabled = false;
- 
+            Btn_Paciente.Enabled = true;
         }
-
-
-        private void Dtg_Base_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            new PacienteControl().ListarPaciente();
-            Dtg_Base.DataSource = PacienteModel.GetPaciente;
-        }
-
         //Funcionalidad basica
-        private void Frm_Paciente_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Ptb_Min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-
         }
 
         private void Ptb_Max_Click(object sender, EventArgs e)
@@ -61,30 +42,12 @@ namespace Software_Medico.Vistas
             this.Close();
         }
 
-        //movilidad de la ventana
-
-        int m, mx, my;
-        private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
+        private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (m == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            }
+
         }
 
-        private void Pnl_Barra_MouseUp(object sender, MouseEventArgs e)
-        {
-            m = 0;
-        }
-
-        private void Pnl_Barra_MouseDown(object sender, MouseEventArgs e)
-        {
-            m = 1;
-            mx = e.X;
-            my = e.Y;
-        }
-
-        //movilidad entre formularios
+        //funcionalidad de la barra de botones
         private void Btn_Enfermedades_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -120,14 +83,6 @@ namespace Software_Medico.Vistas
             frm_Facturacion.Show();
         }
 
-        private void Btn_Usuario_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Frm_LogOut frm_LogOut = new Frm_LogOut();
-            frm_LogOut.Show();
-        }
-
-        
         private void Btn_Cita_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -135,14 +90,33 @@ namespace Software_Medico.Vistas
             frm_Cita.Show();
         }
 
-        //Funcionalidad general
-        private void Btn_Agregar_Click(object sender, EventArgs e)
+        private void Btn_Usuario_Click(object sender, EventArgs e)
         {
-            Aux_Paciente aux_Paciente = new Aux_Paciente();
-            aux_Paciente.Show();
+            this.Close();
+            Frm_LogOut frm_LogOut = new Frm_LogOut();
+            frm_LogOut.Show();
         }
 
-        
+        //Movilidad de la ventana
+        int m, mx, my;
+        private void Pnl_Barra_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
 
+        private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void Pnl_Barra_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
     }
 }
