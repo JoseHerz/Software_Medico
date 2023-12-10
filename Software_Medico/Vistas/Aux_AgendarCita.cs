@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Software_Medico.Controlador;
+using Software_Medico.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,40 @@ namespace Software_Medico.Vistas
         {
             InitializeComponent();
         }
+
+
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            CitasControl citasControl = new CitasControl();
+            CitasModel citasModel = new CitasModel();
+
+
+            Txt_Paciente.Text = citasControl.buscarNombre(Txt_IDPaciente.Text);
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //funcionaliodad de la ventana
         private void Ptb_Min_Click(object sender, EventArgs e)
@@ -48,6 +84,8 @@ namespace Software_Medico.Vistas
         {
             m = 0;
         }
+
+       
 
         private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
         {
