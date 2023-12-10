@@ -178,6 +178,85 @@ namespace Software_Medico.Controlador
 
         }
 
+        public void ListarExpe(int idpac)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection Con = new Conexion().GetConexion())
+                {
+                    Con.Open();
+
+                    string sql = "select ex.ID_EXPEDIENTE,c.FECHA_CITA AS FECHA, CONCAT(p.NOMBRE,' ',p.APELLIDO) AS NOMBRE_PACIENTE,CONCAT(d.PRIMER_NOMBRE,' ',d.PRIMER_APELLIDO) as NOMBRE_MEDICO,ex.DESCRIPCION,pa.NOMBRE_PATOLOGIA as ENFERMEDAD,ex.DIAGNOSTICO,exx.NOMBRE_EXAMEN as EXAMENES,ex.RESULTADO_EXAMEN as RESULTADO,m.NOMBRE_PRODUCTO as MEDICAMENTO,ex.CANTIDAD,ex.INSTRUCCIONES,CONCAT(us.NOMBRE,' ',us.APELLIDO) AS REGISTRO_USUARIO from EXPEDIENTE_CLINICO ex INNER JOIN PACIENTES p ON ex.ID_PACIENTE = p.ID_PACIENTE INNER JOIN MEDICOS d ON ex.ID_MEDICO = d.ID_MEDICO INNER JOIN PATOLOGIAS pa ON ex.ID_PATOLOGIA = pa.ID_PATOLOGIA INNER JOIN EXAMENES exx ON ex.ID_EXAMENES = exx.ID_EXAMENES INNER JOIN USUARIOS us ON ex.ID_USUARIO = us.ID_USUARIO INNER JOIN PRODUCTOS m ON ex.ID_PRODUCTO = m.ID_PRODUCTO INNER JOIN CITAS c ON ex.ID_CITA = c.ID_CITA where ex.ID_PACIENTE = @idpac";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, Con))
+                    {
+                        cmd.Parameters.AddWithValue("@idpac", idpac);
+
+                        SqlDataAdapter adaptador = new SqlDataAdapter(cmd); // Utiliza el comando cmd en lugar de la cadena sql
+                        adaptador.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            ExpedienteModel.GetExpediente = dt;
+
+        }
+
+
+        public DataTable CargarPatologiaCMB()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "Select ID_PATOLOGIA,NOMBRE_PATOLOGIA from PATOLOGIAS ";
+
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
+
+
+        public DataTable CargarExamenCMB()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "Select ID_EXAMENES,NOMBRE_EXAMEN from EXAMENES ";
+
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
+
+
+        public DataTable CargarMedicameMB()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "SELECT ID_PRODUCTO,NOMBRE_PRODUCTO FROM PRODUCTOS WHERE ID_TIPO_INVENTARIO =1 ";
+
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
 
 
 

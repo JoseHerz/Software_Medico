@@ -98,7 +98,9 @@
     <Compile Include="Modelo\PatologiasModel.cs" />
     <Compile Include="Modelo\ProductoModel.cs" />
     <Compile Include="Modelo\UsuarioModel.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="..\..\..\..\..\Music\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\AgregandoHuella.cs">
       <SubType>Form</SubType>
