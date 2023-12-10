@@ -273,7 +273,7 @@ namespace Software_Medico.Controlador
             DataTable dt = new DataTable();
             SqlConnection Con = new Conexion().GetConexion();
             Con.Open();
-            string sql = "SELECT C.ID_CONSULTORIO, C.NOMBRE_CONSULTORIO FROM CONSULTORIO C JOIN CLINICA CL ON C.ID_CLINICA = CL.ID_CLINICA WHERE CL.ID_CLINICA = @idclin;";
+            string sql = "SELECT C.ID_CONSULTORIO AS ID_CONSULTORIO, C.NOMBRE_CONSULTORIO AS NOMBRE_CONSULTORIO FROM CONSULTORIO C JOIN CLINICA CL ON C.ID_CLINICA = CL.ID_CLINICA WHERE CL.ID_CLINICA = @idclin";
             using (SqlCommand cmd = new SqlCommand(sql, Con))
             {
                 cmd.Parameters.AddWithValue("@idclin", idcli);
@@ -292,7 +292,7 @@ namespace Software_Medico.Controlador
             DataTable dt = new DataTable();
             SqlConnection Con = new Conexion().GetConexion();
             Con.Open();
-            string sql = "Select ID_ESPECIALIDAD,NOMBRE_ESPECIALIDAD from ESPECIALIDADES_MEDICAS ";
+            string sql = "Select ID_MEDICO,CONCAT(PRIMER_NOMBRE,' ',PRIMER_APELLIDO) as NOMBRE_MEDICO  from MEDICOS ";
 
 
             SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
