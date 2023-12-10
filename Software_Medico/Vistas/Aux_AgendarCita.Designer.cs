@@ -51,9 +51,9 @@
             this.Dtp_Final = new System.Windows.Forms.DateTimePicker();
             this.Dtp_Inicio = new System.Windows.Forms.DateTimePicker();
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
+            this.btn_Buscar = new System.Windows.Forms.Button();
             this.Txt_IDPaciente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Buscar = new System.Windows.Forms.Button();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
@@ -73,7 +73,7 @@
             this.Pnl_Barra.Controls.Add(this.Ptb_Resize);
             this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_Barra.Name = "Pnl_Barra";
             this.Pnl_Barra.Size = new System.Drawing.Size(722, 32);
             this.Pnl_Barra.TabIndex = 27;
@@ -87,7 +87,7 @@
             this.Ptb_Max.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Max.Image = global::Software_Medico.Properties.Resources.maximizar__1_;
             this.Ptb_Max.Location = new System.Drawing.Point(638, 2);
-            this.Ptb_Max.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Max.Margin = new System.Windows.Forms.Padding(2);
             this.Ptb_Max.Name = "Ptb_Max";
             this.Ptb_Max.Size = new System.Drawing.Size(34, 32);
             this.Ptb_Max.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Min.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Min.Image")));
             this.Ptb_Min.Location = new System.Drawing.Point(599, 2);
-            this.Ptb_Min.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Min.Margin = new System.Windows.Forms.Padding(2);
             this.Ptb_Min.Name = "Ptb_Min";
             this.Ptb_Min.Size = new System.Drawing.Size(34, 32);
             this.Ptb_Min.TabIndex = 2;
@@ -113,7 +113,7 @@
             this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Ptb_Cerrar.Image")));
             this.Ptb_Cerrar.Location = new System.Drawing.Point(676, 2);
-            this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.Ptb_Cerrar.Name = "Ptb_Cerrar";
             this.Ptb_Cerrar.Size = new System.Drawing.Size(34, 32);
             this.Ptb_Cerrar.TabIndex = 1;
@@ -139,7 +139,7 @@
             this.Ptb_Resize.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Resize.Image = global::Software_Medico.Properties.Resources.minimizar__1___1_;
             this.Ptb_Resize.Location = new System.Drawing.Point(638, 2);
-            this.Ptb_Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Resize.Margin = new System.Windows.Forms.Padding(2);
             this.Ptb_Resize.Name = "Ptb_Resize";
             this.Ptb_Resize.Size = new System.Drawing.Size(34, 32);
             this.Ptb_Resize.TabIndex = 4;
@@ -161,7 +161,7 @@
             // 
             this.Txt_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Paciente.Location = new System.Drawing.Point(134, 54);
-            this.Txt_Paciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Paciente.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Paciente.Name = "Txt_Paciente";
             this.Txt_Paciente.Size = new System.Drawing.Size(354, 28);
             this.Txt_Paciente.TabIndex = 16;
@@ -171,7 +171,7 @@
             this.Cmb_Consultorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_Consultorio.FormattingEnabled = true;
             this.Cmb_Consultorio.Location = new System.Drawing.Point(134, 125);
-            this.Cmb_Consultorio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cmb_Consultorio.Margin = new System.Windows.Forms.Padding(2);
             this.Cmb_Consultorio.Name = "Cmb_Consultorio";
             this.Cmb_Consultorio.Size = new System.Drawing.Size(172, 30);
             this.Cmb_Consultorio.TabIndex = 18;
@@ -193,7 +193,7 @@
             this.Btn_Agendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Agendar.ForeColor = System.Drawing.Color.White;
             this.Btn_Agendar.Location = new System.Drawing.Point(582, 144);
-            this.Btn_Agendar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Agendar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Agendar.Name = "Btn_Agendar";
             this.Btn_Agendar.Size = new System.Drawing.Size(120, 60);
             this.Btn_Agendar.TabIndex = 22;
@@ -204,7 +204,7 @@
             // 
             this.DTP_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_Fecha.Location = new System.Drawing.Point(381, 107);
-            this.DTP_Fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTP_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.DTP_Fecha.Name = "DTP_Fecha";
             this.DTP_Fecha.Size = new System.Drawing.Size(324, 28);
             this.DTP_Fecha.TabIndex = 23;
@@ -213,7 +213,7 @@
             // 
             this.Dtp_Mostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dtp_Mostrar.Location = new System.Drawing.Point(22, 220);
-            this.Dtp_Mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Mostrar.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Mostrar.Name = "Dtp_Mostrar";
             this.Dtp_Mostrar.RowHeadersWidth = 51;
             this.Dtp_Mostrar.RowTemplate.Height = 24;
@@ -225,7 +225,7 @@
             this.Cmb_Clinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_Clinica.FormattingEnabled = true;
             this.Cmb_Clinica.Location = new System.Drawing.Point(134, 90);
-            this.Cmb_Clinica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cmb_Clinica.Margin = new System.Windows.Forms.Padding(2);
             this.Cmb_Clinica.Name = "Cmb_Clinica";
             this.Cmb_Clinica.Size = new System.Drawing.Size(172, 30);
             this.Cmb_Clinica.TabIndex = 25;
@@ -268,7 +268,7 @@
             this.Cmb_Doctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_Doctor.FormattingEnabled = true;
             this.Cmb_Doctor.Location = new System.Drawing.Point(134, 160);
-            this.Cmb_Doctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cmb_Doctor.Margin = new System.Windows.Forms.Padding(2);
             this.Cmb_Doctor.Name = "Cmb_Doctor";
             this.Cmb_Doctor.Size = new System.Drawing.Size(172, 30);
             this.Cmb_Doctor.TabIndex = 32;
@@ -290,7 +290,7 @@
             this.Dtp_Final.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_Final.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.Dtp_Final.Location = new System.Drawing.Point(614, 58);
-            this.Dtp_Final.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Final.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Final.Name = "Dtp_Final";
             this.Dtp_Final.Size = new System.Drawing.Size(90, 26);
             this.Dtp_Final.TabIndex = 35;
@@ -301,7 +301,7 @@
             this.Dtp_Inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_Inicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.Dtp_Inicio.Location = new System.Drawing.Point(614, 20);
-            this.Dtp_Inicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Inicio.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Inicio.Name = "Dtp_Inicio";
             this.Dtp_Inicio.Size = new System.Drawing.Size(90, 26);
             this.Dtp_Inicio.TabIndex = 36;
@@ -329,30 +329,10 @@
             this.Pnl_Formulario.Controls.Add(this.label3);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(0, 32);
-            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
             this.Pnl_Formulario.Size = new System.Drawing.Size(722, 496);
             this.Pnl_Formulario.TabIndex = 28;
-            // 
-            // Txt_IDPaciente
-            // 
-            this.Txt_IDPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_IDPaciente.Location = new System.Drawing.Point(134, 22);
-            this.Txt_IDPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Txt_IDPaciente.Name = "Txt_IDPaciente";
-            this.Txt_IDPaciente.Size = new System.Drawing.Size(172, 28);
-            this.Txt_IDPaciente.TabIndex = 44;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 24);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "ID Paciente:";
             // 
             // btn_Buscar
             // 
@@ -368,6 +348,26 @@
             this.btn_Buscar.UseVisualStyleBackColor = false;
             this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
+            // Txt_IDPaciente
+            // 
+            this.Txt_IDPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_IDPaciente.Location = new System.Drawing.Point(134, 22);
+            this.Txt_IDPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_IDPaciente.Name = "Txt_IDPaciente";
+            this.Txt_IDPaciente.Size = new System.Drawing.Size(172, 28);
+            this.Txt_IDPaciente.TabIndex = 44;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 24);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "ID Paciente:";
+            // 
             // Aux_AgendarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,9 +376,10 @@
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.Pnl_Barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Aux_AgendarCita";
             this.Text = "Aux_AgendarCita";
+            this.Load += new System.EventHandler(this.Aux_AgendarCita_Load);
             this.Pnl_Barra.ResumeLayout(false);
             this.Pnl_Barra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).EndInit();

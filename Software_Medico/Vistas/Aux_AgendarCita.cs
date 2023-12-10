@@ -31,7 +31,23 @@ namespace Software_Medico.Vistas
 
 
         }
+        private void Aux_AgendarCita_Load(object sender, EventArgs e)
+        {
+            CitasControl cc = new CitasControl();
+            Cmb_Clinica.DataSource = cc.CargarClinicaCMB();
+            Cmb_Clinica.DisplayMember = "NOMBRE_CLINICA";
+            Cmb_Clinica.ValueMember = "ID_CLINICA";
 
+            Cmb_Consultorio.DataSource = cc.CargarConsultorioCMB(int.Parse(Cmb_Clinica.ValueMember));
+            Cmb_Consultorio.DisplayMember = "NOMBRE_CONSULTORIO";
+            Cmb_Consultorio.ValueMember = "ID_CONSULTORIO";
+
+            Cmb_Doctor.DataSource = cc.CargarDoctorCMB();
+            Cmb_Doctor.DisplayMember = "";
+            Cmb_Doctor.ValueMember = "ID_MEDICO";
+
+
+        }
 
 
 
@@ -85,7 +101,7 @@ namespace Software_Medico.Vistas
             m = 0;
         }
 
-       
+     
 
         private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
         {

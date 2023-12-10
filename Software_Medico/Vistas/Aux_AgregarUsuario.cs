@@ -136,5 +136,10 @@ namespace Software_Medico.Vistas
         {
             this.Close();
         }
+
+        private void Btn_Huella_Click(object sender, EventArgs e)
+        {
+           // AgregandoHuella();   
+        }
     }
 }
