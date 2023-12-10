@@ -1,4 +1,5 @@
-﻿using Software_Medico.Controlador;
+﻿using DPFP;
+using Software_Medico.Controlador;
 using Software_Medico.Modelo;
 using System;
 using System.Collections.Generic;
@@ -135,6 +136,49 @@ namespace Software_Medico.Vistas
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Ptb_Min_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private DPFP.Template Template;
+        
+        string Modo = "";
+        void AgregarHuella()
+        {
+            AgregandoHuella Reg = new AgregandoHuella();
+            Reg.OnTemplate += this.OnTemplate;
+            Reg.ShowDialog();
+        }
+
+        private void OnTemplate(DPFP.Template template)
+        {
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+
+                if (Template != null)
+                {
+                    lblMensaje.Text = "Huella Capturada Exitosamente";
+                    lblMensaje.ForeColor = Color.Green;
+
+                    new UsuarioControl().ActualizaHuellaUsuarios(Txt_Nombre.Text, Template);
+
+                }
+                else
+                {
+                    lblMensaje.Text = "Huella no Capturada";
+                    lblMensaje.ForeColor = Color.Red;
+                }
+
+            }));
+        }
+
+        private void Btn_Huella_Click(object sender, EventArgs e)
+        {
+            AgregarHuella();
         }
     }
 }
