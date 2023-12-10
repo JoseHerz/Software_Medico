@@ -54,7 +54,6 @@
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.Txt_IDPaciente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_clin = new System.Windows.Forms.Button();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
@@ -200,6 +199,7 @@
             this.Btn_Agendar.TabIndex = 22;
             this.Btn_Agendar.Text = "Agendar";
             this.Btn_Agendar.UseVisualStyleBackColor = false;
+            this.Btn_Agendar.Click += new System.EventHandler(this.Btn_Agendar_Click);
             // 
             // DTP_Fecha
             // 
@@ -310,7 +310,6 @@
             // Pnl_Formulario
             // 
             this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
-            this.Pnl_Formulario.Controls.Add(this.btn_clin);
             this.Pnl_Formulario.Controls.Add(this.btn_Buscar);
             this.Pnl_Formulario.Controls.Add(this.Txt_IDPaciente);
             this.Pnl_Formulario.Controls.Add(this.label2);
@@ -370,20 +369,6 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "ID Paciente:";
             // 
-            // btn_clin
-            // 
-            this.btn_clin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.btn_clin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clin.ForeColor = System.Drawing.Color.White;
-            this.btn_clin.Location = new System.Drawing.Point(321, 97);
-            this.btn_clin.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_clin.Name = "btn_clin";
-            this.btn_clin.Size = new System.Drawing.Size(26, 21);
-            this.btn_clin.TabIndex = 46;
-            this.btn_clin.Text = "Agendar";
-            this.btn_clin.UseVisualStyleBackColor = false;
-            this.btn_clin.Click += new System.EventHandler(this.btn_clin_Click);
-            // 
             // Aux_AgendarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +420,5 @@
         private System.Windows.Forms.TextBox Txt_IDPaciente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Buscar;
-        private System.Windows.Forms.Button btn_clin;
     }
 }

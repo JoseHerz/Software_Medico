@@ -14,8 +14,8 @@ namespace Software_Medico.Vistas
 {
     public partial class Aux_Doctor : Form
     {
-        MedicosModel MedicoModel;
-        MedicoControl MedicoControl;
+        MedicosModel MedicoModel = new MedicosModel();
+        MedicoControl MedicoControl = new MedicoControl();
         bool valideditar = false;
 
         public Aux_Doctor()
@@ -24,6 +24,14 @@ namespace Software_Medico.Vistas
           
         }
 
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+            if (Validacion() == true)
+            {
+                Guardar();
+                LimpiarTextBoxes();
+            }
+        }
 
         private void Aux_Doctor_Load(object sender, EventArgs e)
         {
@@ -31,7 +39,14 @@ namespace Software_Medico.Vistas
             Cmb_Especialidad.DataSource = cc.CargarEspecialidadCMB();
             Cmb_Especialidad.DisplayMember = "NOMBRE_ESPECIALIDAD";
             Cmb_Especialidad.ValueMember = "ID_ESPECIALIDAD";
+
+            MedicoControl mm = new MedicoControl();
+            Cmb_Horario.DataSource = mm.CargarHorarioMB();
+            Cmb_Horario.DisplayMember = "DESCRIPCION";
+            Cmb_Horario.ValueMember = "ID_HORARIO";
         }
+
+
 
         void Guardar()
         {
@@ -183,14 +198,7 @@ namespace Software_Medico.Vistas
 
         }
 
-        private void Btn_Guardar_Click(object sender, EventArgs e)
-        {
-            if (Validacion() == true)
-            {
-                Guardar();
-                LimpiarTextBoxes();
-            }
-        }
+       
 
         private void Pnl_Barra_MouseUp(object sender, MouseEventArgs e)
         {

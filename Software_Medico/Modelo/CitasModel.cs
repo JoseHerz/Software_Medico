@@ -12,12 +12,11 @@ namespace Software_Medico.Modelo
        public int Id_Cita {  get; set; }
        public int Id_Medico { get; set; }
        public int Id_Paciente  { get; set; }
-        public DateTime Fecha_Hora_Cita { get; set; }
         public DateTime Fecha_Cita  { get; set; }
-        public string Dni { get; set; }
+       
         public DateTime HoraIni_Cita { get; set; }
         public DateTime HoraFin_Cita { get; set; }
-        public DateTime Duracion { get; set; }
+        public int Duracion { get; set; }
         public string Estado_Cita { get; set; }
         public int Id_Tipo_Cita { get; set; }
         public int Id_Clinica { get; set; }

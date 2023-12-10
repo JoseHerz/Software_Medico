@@ -211,5 +211,25 @@ namespace Software_Medico.Controlador
 
         }
 
+
+
+        public DataTable CargarHorarioMB()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Con = new Conexion().GetConexion();
+            Con.Open();
+            string sql = "SELECT ID_HORARIO ,DESCRIPCION FROM HORARIOS";
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+            adaptador.Fill(dt);
+
+            return dt;
+
+
+        }
+
+
+
+
     }
 }

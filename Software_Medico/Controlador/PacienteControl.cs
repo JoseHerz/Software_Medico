@@ -21,7 +21,7 @@ namespace Software_Medico.Controlador
                 {
                     Con.Open();
                     string sql = "Insert Into PACIENTES(" +
-                        "ID_PACIENTE," +
+                    
                         "NOMBRE," +
                         "APELLIDO," +
                         "FECHA_NACIMIENTO," +
@@ -38,7 +38,7 @@ namespace Software_Medico.Controlador
                         "ESTATUS," +
                         "ID_USUARIO" +
                         ") select" +
-                        " '" + Modelo.Id_Paciente + "'," +
+                     
                         " '" + Modelo.Nombre + "'," +
                         " '" + Modelo.Apellido + "'," +
                         " '" + Modelo.Fecha_Nacimiento + "'," +

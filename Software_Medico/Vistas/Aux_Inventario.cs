@@ -16,5 +16,10 @@ namespace Software_Medico.Vistas
         {
             InitializeComponent();
         }
+
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

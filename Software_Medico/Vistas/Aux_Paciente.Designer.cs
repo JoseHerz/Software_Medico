@@ -39,7 +39,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Txt_Apellido = new System.Windows.Forms.TextBox();
-            this.Cmb_Gsanguineo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Txt_Alergias = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             this.Txt_Telefono = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.Cmb_Sexo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Dtp_Edad = new System.Windows.Forms.DateTimePicker();
@@ -61,11 +59,15 @@
             this.Txt_EnfCronica = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.Chk_TSMedico = new System.Windows.Forms.CheckBox();
-            this.Cmb_Seguro = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Txt_NSmedico = new System.Windows.Forms.TextBox();
             this.Txt_Expediente = new System.Windows.Forms.TextBox();
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
+            this.txt_genero = new System.Windows.Forms.TextBox();
+            this.Txt_Seguro = new System.Windows.Forms.TextBox();
+            this.Txt_Sangre = new System.Windows.Forms.TextBox();
+            this.Txt_User = new System.Windows.Forms.TextBox();
+            this.Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
             this.Pnl_Barra.SuspendLayout();
@@ -91,7 +93,7 @@
             this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
             this.Ptb_Cerrar.Location = new System.Drawing.Point(719, 2);
-            this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.Ptb_Cerrar.Name = "Ptb_Cerrar";
             this.Ptb_Cerrar.Size = new System.Drawing.Size(34, 32);
             this.Ptb_Cerrar.TabIndex = 1;
@@ -104,7 +106,7 @@
             this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
             this.Ptb_Min.Location = new System.Drawing.Point(681, 2);
-            this.Ptb_Min.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ptb_Min.Margin = new System.Windows.Forms.Padding(2);
             this.Ptb_Min.Name = "Ptb_Min";
             this.Ptb_Min.Size = new System.Drawing.Size(34, 32);
             this.Ptb_Min.TabIndex = 3;
@@ -119,7 +121,7 @@
             this.Pnl_Barra.Controls.Add(this.label1);
             this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_Barra.Name = "Pnl_Barra";
             this.Pnl_Barra.Size = new System.Drawing.Size(756, 32);
             this.Pnl_Barra.TabIndex = 7;
@@ -143,7 +145,7 @@
             // 
             this.Txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Nombre.Location = new System.Drawing.Point(101, 55);
-            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(204, 26);
             this.Txt_Nombre.TabIndex = 1;
@@ -156,12 +158,13 @@
             this.Btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Guardar.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Guardar.Location = new System.Drawing.Point(457, 358);
-            this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Guardar.Name = "Btn_Guardar";
             this.Btn_Guardar.Size = new System.Drawing.Size(116, 41);
             this.Btn_Guardar.TabIndex = 18;
             this.Btn_Guardar.Text = "Guardar";
             this.Btn_Guardar.UseVisualStyleBackColor = false;
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
             // 
             // Btn_Cancelar
             // 
@@ -171,7 +174,7 @@
             this.Btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.Btn_Cancelar.Location = new System.Drawing.Point(577, 358);
-            this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(116, 41);
             this.Btn_Cancelar.TabIndex = 19;
@@ -206,20 +209,10 @@
             // 
             this.Txt_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Apellido.Location = new System.Drawing.Point(101, 84);
-            this.Txt_Apellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Apellido.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Apellido.Name = "Txt_Apellido";
             this.Txt_Apellido.Size = new System.Drawing.Size(204, 26);
             this.Txt_Apellido.TabIndex = 24;
-            // 
-            // Cmb_Gsanguineo
-            // 
-            this.Cmb_Gsanguineo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Gsanguineo.FormattingEnabled = true;
-            this.Cmb_Gsanguineo.Location = new System.Drawing.Point(613, 68);
-            this.Cmb_Gsanguineo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Cmb_Gsanguineo.Name = "Cmb_Gsanguineo";
-            this.Cmb_Gsanguineo.Size = new System.Drawing.Size(77, 28);
-            this.Cmb_Gsanguineo.TabIndex = 27;
             // 
             // label8
             // 
@@ -249,7 +242,7 @@
             // 
             this.Txt_Alergias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Alergias.Location = new System.Drawing.Point(532, 110);
-            this.Txt_Alergias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Alergias.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Alergias.Name = "Txt_Alergias";
             this.Txt_Alergias.Size = new System.Drawing.Size(204, 26);
             this.Txt_Alergias.TabIndex = 30;
@@ -270,7 +263,7 @@
             // 
             this.Txt_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Telefono.Location = new System.Drawing.Point(101, 209);
-            this.Txt_Telefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Telefono.Name = "Txt_Telefono";
             this.Txt_Telefono.Size = new System.Drawing.Size(159, 26);
             this.Txt_Telefono.TabIndex = 32;
@@ -298,16 +291,6 @@
             this.label12.Size = new System.Drawing.Size(104, 20);
             this.label12.TabIndex = 35;
             this.label12.Text = "Expediente:";
-            // 
-            // Cmb_Sexo
-            // 
-            this.Cmb_Sexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Sexo.FormattingEnabled = true;
-            this.Cmb_Sexo.Location = new System.Drawing.Point(79, 147);
-            this.Cmb_Sexo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Cmb_Sexo.Name = "Cmb_Sexo";
-            this.Cmb_Sexo.Size = new System.Drawing.Size(116, 28);
-            this.Cmb_Sexo.TabIndex = 36;
             // 
             // label3
             // 
@@ -337,7 +320,7 @@
             // 
             this.Dtp_Edad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_Edad.Location = new System.Drawing.Point(198, 118);
-            this.Dtp_Edad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dtp_Edad.Margin = new System.Windows.Forms.Padding(2);
             this.Dtp_Edad.Name = "Dtp_Edad";
             this.Dtp_Edad.Size = new System.Drawing.Size(246, 23);
             this.Dtp_Edad.TabIndex = 39;
@@ -358,7 +341,7 @@
             // 
             this.Txt_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Direccion.Location = new System.Drawing.Point(101, 179);
-            this.Txt_Direccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Direccion.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Direccion.Name = "Txt_Direccion";
             this.Txt_Direccion.Size = new System.Drawing.Size(204, 26);
             this.Txt_Direccion.TabIndex = 41;
@@ -379,7 +362,7 @@
             // 
             this.Txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Email.Location = new System.Drawing.Point(88, 240);
-            this.Txt_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Email.Name = "Txt_Email";
             this.Txt_Email.Size = new System.Drawing.Size(225, 26);
             this.Txt_Email.TabIndex = 43;
@@ -400,7 +383,7 @@
             // 
             this.Txt_Hmedica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Hmedica.Location = new System.Drawing.Point(458, 232);
-            this.Txt_Hmedica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Hmedica.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Hmedica.Name = "Txt_Hmedica";
             this.Txt_Hmedica.Size = new System.Drawing.Size(278, 26);
             this.Txt_Hmedica.TabIndex = 45;
@@ -421,7 +404,7 @@
             // 
             this.Txt_EnfCronica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_EnfCronica.Location = new System.Drawing.Point(458, 171);
-            this.Txt_EnfCronica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_EnfCronica.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_EnfCronica.Name = "Txt_EnfCronica";
             this.Txt_EnfCronica.Size = new System.Drawing.Size(278, 26);
             this.Txt_EnfCronica.TabIndex = 47;
@@ -444,23 +427,13 @@
             this.Chk_TSMedico.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Chk_TSMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chk_TSMedico.Location = new System.Drawing.Point(22, 280);
-            this.Chk_TSMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Chk_TSMedico.Margin = new System.Windows.Forms.Padding(2);
             this.Chk_TSMedico.Name = "Chk_TSMedico";
             this.Chk_TSMedico.Size = new System.Drawing.Size(197, 24);
             this.Chk_TSMedico.TabIndex = 50;
             this.Chk_TSMedico.Text = "Tiene Seguro Medico";
             this.Chk_TSMedico.UseVisualStyleBackColor = true;
             this.Chk_TSMedico.CheckedChanged += new System.EventHandler(this.Chk_TSMedico_CheckedChanged);
-            // 
-            // Cmb_Seguro
-            // 
-            this.Cmb_Seguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Seguro.FormattingEnabled = true;
-            this.Cmb_Seguro.Location = new System.Drawing.Point(154, 316);
-            this.Cmb_Seguro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Cmb_Seguro.Name = "Cmb_Seguro";
-            this.Cmb_Seguro.Size = new System.Drawing.Size(159, 28);
-            this.Cmb_Seguro.TabIndex = 51;
             // 
             // label17
             // 
@@ -478,7 +451,7 @@
             // 
             this.Txt_NSmedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NSmedico.Location = new System.Drawing.Point(30, 380);
-            this.Txt_NSmedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_NSmedico.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_NSmedico.Name = "Txt_NSmedico";
             this.Txt_NSmedico.Size = new System.Drawing.Size(319, 26);
             this.Txt_NSmedico.TabIndex = 53;
@@ -487,7 +460,7 @@
             // 
             this.Txt_Expediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Expediente.Location = new System.Drawing.Point(564, 276);
-            this.Txt_Expediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Expediente.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Expediente.Name = "Txt_Expediente";
             this.Txt_Expediente.Size = new System.Drawing.Size(181, 26);
             this.Txt_Expediente.TabIndex = 54;
@@ -495,10 +468,14 @@
             // Pnl_Formulario
             // 
             this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
+            this.Pnl_Formulario.Controls.Add(this.Txt_User);
+            this.Pnl_Formulario.Controls.Add(this.Label);
+            this.Pnl_Formulario.Controls.Add(this.Txt_Sangre);
+            this.Pnl_Formulario.Controls.Add(this.Txt_Seguro);
+            this.Pnl_Formulario.Controls.Add(this.txt_genero);
             this.Pnl_Formulario.Controls.Add(this.Txt_Expediente);
             this.Pnl_Formulario.Controls.Add(this.Txt_NSmedico);
             this.Pnl_Formulario.Controls.Add(this.label17);
-            this.Pnl_Formulario.Controls.Add(this.Cmb_Seguro);
             this.Pnl_Formulario.Controls.Add(this.Chk_TSMedico);
             this.Pnl_Formulario.Controls.Add(this.label16);
             this.Pnl_Formulario.Controls.Add(this.Txt_EnfCronica);
@@ -512,7 +489,6 @@
             this.Pnl_Formulario.Controls.Add(this.Dtp_Edad);
             this.Pnl_Formulario.Controls.Add(this.label4);
             this.Pnl_Formulario.Controls.Add(this.label3);
-            this.Pnl_Formulario.Controls.Add(this.Cmb_Sexo);
             this.Pnl_Formulario.Controls.Add(this.label12);
             this.Pnl_Formulario.Controls.Add(this.label11);
             this.Pnl_Formulario.Controls.Add(this.Txt_Telefono);
@@ -520,7 +496,6 @@
             this.Pnl_Formulario.Controls.Add(this.Txt_Alergias);
             this.Pnl_Formulario.Controls.Add(this.label9);
             this.Pnl_Formulario.Controls.Add(this.label8);
-            this.Pnl_Formulario.Controls.Add(this.Cmb_Gsanguineo);
             this.Pnl_Formulario.Controls.Add(this.Txt_Apellido);
             this.Pnl_Formulario.Controls.Add(this.label7);
             this.Pnl_Formulario.Controls.Add(this.label5);
@@ -530,10 +505,58 @@
             this.Pnl_Formulario.Controls.Add(this.label2);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(0, 32);
-            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
             this.Pnl_Formulario.Size = new System.Drawing.Size(756, 446);
             this.Pnl_Formulario.TabIndex = 8;
+            // 
+            // txt_genero
+            // 
+            this.txt_genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_genero.Location = new System.Drawing.Point(101, 147);
+            this.txt_genero.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_genero.Name = "txt_genero";
+            this.txt_genero.Size = new System.Drawing.Size(159, 26);
+            this.txt_genero.TabIndex = 55;
+            // 
+            // Txt_Seguro
+            // 
+            this.Txt_Seguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Seguro.Location = new System.Drawing.Point(158, 315);
+            this.Txt_Seguro.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Seguro.Name = "Txt_Seguro";
+            this.Txt_Seguro.Size = new System.Drawing.Size(159, 26);
+            this.Txt_Seguro.TabIndex = 56;
+            // 
+            // Txt_Sangre
+            // 
+            this.Txt_Sangre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Sangre.Location = new System.Drawing.Point(613, 68);
+            this.Txt_Sangre.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Sangre.Name = "Txt_Sangre";
+            this.Txt_Sangre.Size = new System.Drawing.Size(99, 26);
+            this.Txt_Sangre.TabIndex = 57;
+            // 
+            // Txt_User
+            // 
+            this.Txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_User.Location = new System.Drawing.Point(564, 315);
+            this.Txt_User.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_User.Name = "Txt_User";
+            this.Txt_User.Size = new System.Drawing.Size(181, 26);
+            this.Txt_User.TabIndex = 59;
+            // 
+            // Label
+            // 
+            this.Label.AutoSize = true;
+            this.Label.BackColor = System.Drawing.Color.Transparent;
+            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.Location = new System.Drawing.Point(456, 318);
+            this.Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(71, 20);
+            this.Label.TabIndex = 58;
+            this.Label.Text = "Usuario";
             // 
             // Aux_Paciente
             // 
@@ -543,7 +566,7 @@
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.Pnl_Barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Aux_Paciente";
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).EndInit();
@@ -569,7 +592,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Txt_Apellido;
-        private System.Windows.Forms.ComboBox Cmb_Gsanguineo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Txt_Alergias;
@@ -577,7 +599,6 @@
         private System.Windows.Forms.TextBox Txt_Telefono;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox Cmb_Sexo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker Dtp_Edad;
@@ -591,10 +612,14 @@
         private System.Windows.Forms.TextBox Txt_EnfCronica;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox Chk_TSMedico;
-        private System.Windows.Forms.ComboBox Cmb_Seguro;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Txt_NSmedico;
         private System.Windows.Forms.TextBox Txt_Expediente;
         private System.Windows.Forms.Panel Pnl_Formulario;
+        private System.Windows.Forms.TextBox txt_genero;
+        private System.Windows.Forms.TextBox Txt_Seguro;
+        private System.Windows.Forms.TextBox Txt_Sangre;
+        private System.Windows.Forms.TextBox Txt_User;
+        private System.Windows.Forms.Label Label;
     }
 }

@@ -15,6 +15,8 @@ namespace Software_Medico.Vistas
     public partial class Aux_AgendarCita : Form
     {
         CitasControl cc = new CitasControl();
+        CitasModel CitasModel = new CitasModel();
+        bool valideditar = false;
         public Aux_AgendarCita()
         {
             InitializeComponent();
@@ -42,25 +44,129 @@ namespace Software_Medico.Vistas
             Cmb_Clinica.DisplayMember = "NOMBRE_CLINICA";
             Cmb_Clinica.ValueMember = "ID_CLINICA";
 
+            Cmb_Consultorio.DataSource = cc.CargarConsultorioCMB();
+            Cmb_Consultorio.DisplayMember = "NOMBRE_CONSULTORIO";
+            Cmb_Consultorio.ValueMember = "ID_CONSULTORIO";
 
             Cmb_Doctor.DataSource = cc.CargarDoctorCMB();
             Cmb_Doctor.DisplayMember = "NOMBRE_MEDICO";
             Cmb_Doctor.ValueMember = "ID_MEDICO";
 
+           // obtenerCity();
+
+          
 
         }
 
-
-        private void btn_clin_Click(object sender, EventArgs e)
+        public void obtenerCity()
         {
-            Cmb_Consultorio.DataSource = cc.CargarConsultorioCMB(int.Parse(Cmb_Clinica.ValueMember));
-            Cmb_Consultorio.DisplayMember = "NOMBRE_CONSULTORIO";
-            Cmb_Consultorio.ValueMember = "ID_CONSULTORIO";
+            new CitasControl().ListarCita();
+            Dtp_Mostrar.DataSource = CitasModel.GetCitas;
+
         }
 
 
+     
+
+        private void Btn_Agendar_Click(object sender, EventArgs e)
+        {
+            if (Validacion() == true)
+            {
+                Guardar();
+                LimpiarTextBoxes();
+            }
+
+        }
+
+        void Guardar()
+        {
 
 
+            CitasModel.Id_Paciente = int.Parse(Txt_IDPaciente.Text);
+            CitasModel.Id_Medico = int.Parse(Cmb_Doctor.SelectedValue.ToString());
+            CitasModel.Id_Clinica = int.Parse(Cmb_Clinica.SelectedValue.ToString());
+            CitasModel.Id_Consultorio = int.Parse(Cmb_Consultorio.SelectedValue.ToString());
+            CitasModel.Fecha_Cita = DTP_Fecha.Value;
+            CitasModel.HoraIni_Cita = Dtp_Inicio.Value;
+            CitasModel.HoraFin_Cita=Dtp_Final.Value;
+            TimeSpan duracion = Dtp_Final.Value-Dtp_Inicio.Value ;
+            CitasModel.Duracion = (int)duracion.TotalHours;
+            CitasModel.Estado_Cita = "True";
+            CitasModel.Observacion = "ss";
+            CitasModel.Id_Tipo_Cita = 1;
+            CitasModel.Id_Usuario = 3;
+           
+
+
+
+
+            if (valideditar == false)
+            {
+                if (cc.ValidCita(CitasModel) == false)
+                {
+
+                    if (cc.CrearCita(CitasModel) == true)
+                    {
+                        MessageBox.Show("Registro Guardado", "Info Sistem");
+                        //padre.obtenerCity();
+                        //  this.Close();
+                        cc.ListarCita2(int.Parse(Txt_IDPaciente.Text));
+                        Dtp_Mostrar.DataSource = CitasModel.GetCitas;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Registro No se Puedo Guardar", "Info Sistem");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El Registro No se Puedo Guardar debido a que es un duplicado.", "Info Sistem");
+                }
+            }
+            else
+            {
+                if (cc.UpdateCita(CitasModel) == true)
+                {
+                    MessageBox.Show("Registro Actualizado", "Info Sistem");
+                    //padre.obtenerCity();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("El Registro No se Puedo Guardar", "Info Sistem");
+                }
+
+            }
+
+
+
+
+        }
+        void LimpiarTextBoxes()
+        {
+
+            Txt_IDPaciente.Text = string.Empty;
+            Txt_Paciente.Text = string.Empty;
+            Cmb_Clinica.Text = string.Empty;
+            Cmb_Consultorio.Text = string.Empty;
+            Cmb_Doctor.Text = string.Empty;
+        }
+
+        bool Validacion()
+        {
+            bool validacion = true;
+
+
+        
+            if (string.IsNullOrEmpty(Txt_IDPaciente.Text))
+            {
+                MessageBox.Show("El id no puede estar vacía");
+                Txt_IDPaciente.Focus();
+                return false;
+            }
+
+            return validacion;
+        }
 
 
 
@@ -107,7 +213,7 @@ namespace Software_Medico.Vistas
             m = 0;
         }
 
-     
+       
 
         private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)
         {

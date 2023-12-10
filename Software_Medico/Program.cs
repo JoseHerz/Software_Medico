@@ -17,7 +17,7 @@ namespace Software_Medico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Aux_AgendarCita());
+            Application.Run(new Aux_Paciente());
         }
     }
     }
