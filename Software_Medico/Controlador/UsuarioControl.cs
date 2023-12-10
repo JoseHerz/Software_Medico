@@ -222,5 +222,82 @@ namespace Software_Medico.Controlador
 
 
 
+
+        public Boolean ActualizaHuellaUsuarios(string IdUsuario, DPFP.Template Huella)
+        {
+            try
+            {
+                using (SqlConnection Con = new Conexion().GetConexion())
+                {
+                    Con.Open();
+
+                    byte[] ImagenHuella = Huella.Bytes;
+
+                    string Qry = "update Usuarios set HUELLA = @HUELLA where ID_USUARIO = '" + IdUsuario + "'";
+                    using (SqlCommand cmd = new SqlCommand(Qry, Con))
+                    {
+                        cmd.Parameters.Add("@Huella", SqlDbType.VarBinary).Value = ImagenHuella;
+                        cmd.ExecuteNonQuery();
+                    }
+                    Con.Close();
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+
+
+
+        public UsuarioModel ConsultaUsuario(int IdUsuario)
+        {
+            try
+            {
+                UsuarioModel Modelo = new UsuarioModel();
+                Modelo.Id_Usuario = IdUsuario;
+
+                using (SqlConnection Con = new Conexion().GetConexion())
+                {
+
+                    Con.Open();
+
+                    string qry = "select * from Usuario where ID_USUARIO =" + IdUsuario;
+                    using (SqlCommand cmd = new SqlCommand(qry, Con))
+                    {
+                        SqlDataReader Datos = cmd.ExecuteReader();
+                        if (Datos.HasRows)
+                        {
+                            while (Datos.Read())
+                            {
+                                Modelo.Nombre = Datos.GetString(Datos.GetOrdinal("NOMBRE"));
+                                Modelo.Apellido = Datos.GetString(Datos.GetOrdinal("APELLIDO"));
+                                Modelo.Clave = Datos.GetString(Datos.GetOrdinal("CLAVE"));
+                                Modelo.Id_Usuario_Rol = Datos.GetInt32(Datos.GetOrdinal("ROL"));
+                                Modelo.Correo_Electronico = Datos.GetString(Datos.GetOrdinal("CORREO_ELECTRONICO"));
+                                Modelo.Estatus = Datos.GetBoolean(Datos.GetOrdinal("ACTIVO"));
+                              
+
+                            }
+                        }
+
+
+
+                        //Datos.Fill(dt);
+
+                    }
+                    Con.Close();
+                    return Modelo;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
     }
 }
