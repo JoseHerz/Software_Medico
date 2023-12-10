@@ -221,7 +221,35 @@ namespace Software_Medico.Controlador
         }
 
 
+        public string buscarNombre(string idpa)
+        {
 
+            using (SqlConnection Con = new Conexion().GetConexion())
+            {
+                Con.Open();
+                string sql = "SELECT CONCAT(NOMBRE,' ',APELLIDO) AS NOMBRE_COMPLETO FROM PACIENTES WHERE ID_PACIENTE = @idpac";
+
+                using (SqlCommand cmd = new SqlCommand(sql, Con))
+                {
+                    cmd.Parameters.AddWithValue("@idpac", idpa);
+                    string nombre = (string)cmd.ExecuteScalar();
+                    if (nombre != null)
+                    {
+                        return nombre;
+                    }
+                    else
+                    {
+                        return nombre = "Paciente no encontrado";
+                    }
+
+
+                }
+
+                Con.Close();
+
+            }
+            
+        }
 
 
     }
