@@ -100,6 +100,12 @@
     <Compile Include="Modelo\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Aux_AgendarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_AgendarCita.Designer.cs">
+      <DependentUpon>Aux_AgendarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Aux_AgregarEnfermedad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="Vistas\Aux_Doctor.Designer.cs">
       <DependentUpon>Aux_Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Aux_Examenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Aux_Examenes.Designer.cs">
+      <DependentUpon>Aux_Examenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Aux_Inventario.cs">
       <SubType>Form</SubType>
@@ -200,6 +212,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\Aux_AgendarCita.resx">
+      <DependentUpon>Aux_AgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Aux_AgregarEnfermedad.resx">
       <DependentUpon>Aux_AgregarEnfermedad.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Aux_Doctor.resx">
       <DependentUpon>Aux_Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Aux_Examenes.resx">
+      <DependentUpon>Aux_Examenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Aux_Inventario.resx">
       <DependentUpon>Aux_Inventario.cs</DependentUpon>

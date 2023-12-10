@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
+            this.Lbl_Nombre = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Btn_LogOut = new System.Windows.Forms.Button();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
             this.Btn_Usuario = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.Ptb_Min = new System.Windows.Forms.PictureBox();
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Lbl_Nombre = new System.Windows.Forms.Label();
             this.Pnl_Formulario.SuspendLayout();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
@@ -64,6 +64,26 @@
             this.Pnl_Formulario.Size = new System.Drawing.Size(578, 661);
             this.Pnl_Formulario.TabIndex = 17;
             // 
+            // Lbl_Nombre
+            // 
+            this.Lbl_Nombre.AutoSize = true;
+            this.Lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Nombre.Location = new System.Drawing.Point(175, 114);
+            this.Lbl_Nombre.Name = "Lbl_Nombre";
+            this.Lbl_Nombre.Size = new System.Drawing.Size(217, 51);
+            this.Lbl_Nombre.TabIndex = 88;
+            this.Lbl_Nombre.Text = "NOMBRE";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(175, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 51);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "Hola!!!!";
+            // 
             // Btn_LogOut
             // 
             this.Btn_LogOut.BackColor = System.Drawing.Color.Transparent;
@@ -72,11 +92,11 @@
             this.Btn_LogOut.ForeColor = System.Drawing.Color.Black;
             this.Btn_LogOut.Image = global::Software_Medico.Properties.Resources.apagado;
             this.Btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_LogOut.Location = new System.Drawing.Point(29, 499);
+            this.Btn_LogOut.Location = new System.Drawing.Point(140, 368);
             this.Btn_LogOut.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_LogOut.Name = "Btn_LogOut";
             this.Btn_LogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Btn_LogOut.Size = new System.Drawing.Size(304, 144);
+            this.Btn_LogOut.Size = new System.Drawing.Size(304, 202);
             this.Btn_LogOut.TabIndex = 86;
             this.Btn_LogOut.Text = "LogOut";
             this.Btn_LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,26 +279,6 @@
             this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 52);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "Hola!!!!";
-            // 
-            // Lbl_Nombre
-            // 
-            this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Nombre.Location = new System.Drawing.Point(59, 102);
-            this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(221, 52);
-            this.Lbl_Nombre.TabIndex = 88;
-            this.Lbl_Nombre.Text = "NOMBRE";
             // 
             // Frm_LogOut
             // 

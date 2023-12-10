@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cita));
             this.Pnl_Formulario = new System.Windows.Forms.Panel();
-            this.Dtg_Base = new System.Windows.Forms.DataGridView();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Pnl_Barra = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.Btn_Usuario = new System.Windows.Forms.Button();
             this.Btn_Cita = new System.Windows.Forms.Button();
             this.Btn_Facturacion = new System.Windows.Forms.Button();
@@ -40,46 +41,37 @@
             this.Btn_Paciente = new System.Windows.Forms.Button();
             this.Btn_Doctores = new System.Windows.Forms.Button();
             this.Btn_Enfermedades = new System.Windows.Forms.Button();
-            this.Pnl_Barra = new System.Windows.Forms.Panel();
             this.Ptb_Max = new System.Windows.Forms.PictureBox();
             this.Ptb_Min = new System.Windows.Forms.PictureBox();
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.Dtp_Mostrar = new System.Windows.Forms.DataGridView();
+            this.Dtp_Filtroa = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_filtrof = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.Pnl_Formulario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).BeginInit();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Resize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dtp_Mostrar)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Formulario
             // 
             this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
-            this.Pnl_Formulario.Controls.Add(this.Dtg_Base);
+            this.Pnl_Formulario.Controls.Add(this.label2);
+            this.Pnl_Formulario.Controls.Add(this.Dtp_filtrof);
+            this.Pnl_Formulario.Controls.Add(this.Dtp_Mostrar);
+            this.Pnl_Formulario.Controls.Add(this.Dtp_Filtroa);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(101, 39);
             this.Pnl_Formulario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
             this.Pnl_Formulario.Size = new System.Drawing.Size(998, 660);
             this.Pnl_Formulario.TabIndex = 23;
-            // 
-            // Dtg_Base
-            // 
-            this.Dtg_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dtg_Base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtg_Base.Location = new System.Drawing.Point(19, 180);
-            this.Dtg_Base.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Dtg_Base.Name = "Dtg_Base";
-            this.Dtg_Base.RowHeadersWidth = 51;
-            this.Dtg_Base.RowTemplate.Height = 24;
-            this.Dtg_Base.Size = new System.Drawing.Size(958, 450);
-            this.Dtg_Base.TabIndex = 28;
             // 
             // Pnl_Menu
             // 
@@ -98,6 +90,36 @@
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(101, 660);
             this.Pnl_Menu.TabIndex = 22;
+            // 
+            // Pnl_Barra
+            // 
+            this.Pnl_Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.Pnl_Barra.Controls.Add(this.Ptb_Max);
+            this.Pnl_Barra.Controls.Add(this.Ptb_Min);
+            this.Pnl_Barra.Controls.Add(this.Ptb_Cerrar);
+            this.Pnl_Barra.Controls.Add(this.label1);
+            this.Pnl_Barra.Controls.Add(this.Ptb_Resize);
+            this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pnl_Barra.Name = "Pnl_Barra";
+            this.Pnl_Barra.Size = new System.Drawing.Size(1099, 39);
+            this.Pnl_Barra.TabIndex = 21;
+            this.Pnl_Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseDown);
+            this.Pnl_Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseMove);
+            this.Pnl_Barra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cita";
             // 
             // Btn_Usuario
             // 
@@ -218,24 +240,6 @@
             this.Btn_Enfermedades.UseVisualStyleBackColor = true;
             this.Btn_Enfermedades.Click += new System.EventHandler(this.Btn_Enfermedades_Click);
             // 
-            // Pnl_Barra
-            // 
-            this.Pnl_Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.Pnl_Barra.Controls.Add(this.Ptb_Max);
-            this.Pnl_Barra.Controls.Add(this.Ptb_Min);
-            this.Pnl_Barra.Controls.Add(this.Ptb_Cerrar);
-            this.Pnl_Barra.Controls.Add(this.label1);
-            this.Pnl_Barra.Controls.Add(this.Ptb_Resize);
-            this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Pnl_Barra.Name = "Pnl_Barra";
-            this.Pnl_Barra.Size = new System.Drawing.Size(1099, 39);
-            this.Pnl_Barra.TabIndex = 21;
-            this.Pnl_Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseDown);
-            this.Pnl_Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseMove);
-            this.Pnl_Barra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseUp);
-            // 
             // Ptb_Max
             // 
             this.Ptb_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -275,18 +279,6 @@
             this.Ptb_Cerrar.TabStop = false;
             this.Ptb_Cerrar.Click += new System.EventHandler(this.Ptb_Cerrar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cita";
-            // 
             // Ptb_Resize
             // 
             this.Ptb_Resize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -300,6 +292,42 @@
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
+            // Dtp_Mostrar
+            // 
+            this.Dtp_Mostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dtp_Mostrar.Location = new System.Drawing.Point(19, 145);
+            this.Dtp_Mostrar.Name = "Dtp_Mostrar";
+            this.Dtp_Mostrar.RowHeadersWidth = 51;
+            this.Dtp_Mostrar.RowTemplate.Height = 24;
+            this.Dtp_Mostrar.Size = new System.Drawing.Size(958, 496);
+            this.Dtp_Mostrar.TabIndex = 26;
+            // 
+            // Dtp_Filtroa
+            // 
+            this.Dtp_Filtroa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_Filtroa.Location = new System.Drawing.Point(40, 71);
+            this.Dtp_Filtroa.Name = "Dtp_Filtroa";
+            this.Dtp_Filtroa.Size = new System.Drawing.Size(430, 34);
+            this.Dtp_Filtroa.TabIndex = 25;
+            // 
+            // Dtp_filtrof
+            // 
+            this.Dtp_filtrof.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_filtrof.Location = new System.Drawing.Point(514, 71);
+            this.Dtp_filtrof.Name = "Dtp_filtrof";
+            this.Dtp_filtrof.Size = new System.Drawing.Size(430, 34);
+            this.Dtp_filtrof.TabIndex = 27;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 29);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Filtrar:";
+            // 
             // Frm_Cita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,7 +340,7 @@
             this.Name = "Frm_Cita";
             this.Text = "Frm_Cita";
             this.Pnl_Formulario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).EndInit();
+            this.Pnl_Formulario.PerformLayout();
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Barra.ResumeLayout(false);
             this.Pnl_Barra.PerformLayout();
@@ -320,6 +348,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Resize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dtp_Mostrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,7 +356,6 @@
         #endregion
 
         private System.Windows.Forms.Panel Pnl_Formulario;
-        private System.Windows.Forms.DataGridView Dtg_Base;
         private System.Windows.Forms.Panel Pnl_Menu;
         private System.Windows.Forms.Button Btn_Usuario;
         private System.Windows.Forms.Button Btn_Cita;
@@ -343,5 +371,9 @@
         private System.Windows.Forms.PictureBox Ptb_Cerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Ptb_Resize;
+        private System.Windows.Forms.DateTimePicker Dtp_filtrof;
+        private System.Windows.Forms.DataGridView Dtp_Mostrar;
+        private System.Windows.Forms.DateTimePicker Dtp_Filtroa;
+        private System.Windows.Forms.Label label2;
     }
 }

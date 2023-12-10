@@ -44,21 +44,31 @@
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.Btn_Agregar = new System.Windows.Forms.Button();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Txt_buscar = new System.Windows.Forms.TextBox();
+            this.Dtg_Base = new System.Windows.Forms.DataGridView();
+            this.Pnl_Formulario.SuspendLayout();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Resize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Formulario
             // 
             this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
+            this.Pnl_Formulario.Controls.Add(this.Btn_Agregar);
+            this.Pnl_Formulario.Controls.Add(this.Btn_Buscar);
+            this.Pnl_Formulario.Controls.Add(this.Txt_buscar);
+            this.Pnl_Formulario.Controls.Add(this.Dtg_Base);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(102, 40);
             this.Pnl_Formulario.Name = "Pnl_Formulario";
-            this.Pnl_Formulario.Size = new System.Drawing.Size(1029, 664);
+            this.Pnl_Formulario.Size = new System.Drawing.Size(1134, 763);
             this.Pnl_Formulario.TabIndex = 14;
             // 
             // Pnl_Menu
@@ -75,7 +85,7 @@
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 40);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(102, 664);
+            this.Pnl_Menu.Size = new System.Drawing.Size(102, 763);
             this.Pnl_Menu.TabIndex = 13;
             // 
             // Btn_Usuario
@@ -201,7 +211,7 @@
             this.Pnl_Barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Barra.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Barra.Name = "Pnl_Barra";
-            this.Pnl_Barra.Size = new System.Drawing.Size(1131, 40);
+            this.Pnl_Barra.Size = new System.Drawing.Size(1236, 40);
             this.Pnl_Barra.TabIndex = 12;
             this.Pnl_Barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseDown);
             this.Pnl_Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Barra_MouseMove);
@@ -212,7 +222,7 @@
             this.Ptb_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Max.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Max.Image = global::Software_Medico.Properties.Resources.maximizar__1_;
-            this.Ptb_Max.Location = new System.Drawing.Point(1018, 3);
+            this.Ptb_Max.Location = new System.Drawing.Point(1123, 3);
             this.Ptb_Max.Name = "Ptb_Max";
             this.Ptb_Max.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Max.TabIndex = 3;
@@ -224,7 +234,7 @@
             this.Ptb_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Min.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Min.Image = global::Software_Medico.Properties.Resources.minimizar__3___1_;
-            this.Ptb_Min.Location = new System.Drawing.Point(967, 3);
+            this.Ptb_Min.Location = new System.Drawing.Point(1072, 3);
             this.Ptb_Min.Name = "Ptb_Min";
             this.Ptb_Min.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Min.TabIndex = 2;
@@ -236,7 +246,7 @@
             this.Ptb_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Cerrar.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Cerrar.Image = global::Software_Medico.Properties.Resources.cerrar_sesion__1_;
-            this.Ptb_Cerrar.Location = new System.Drawing.Point(1069, 3);
+            this.Ptb_Cerrar.Location = new System.Drawing.Point(1174, 3);
             this.Ptb_Cerrar.Name = "Ptb_Cerrar";
             this.Ptb_Cerrar.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Cerrar.TabIndex = 1;
@@ -260,24 +270,83 @@
             this.Ptb_Resize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Ptb_Resize.BackColor = System.Drawing.Color.Transparent;
             this.Ptb_Resize.Image = global::Software_Medico.Properties.Resources.minimizar__1___1_;
-            this.Ptb_Resize.Location = new System.Drawing.Point(1018, 3);
+            this.Ptb_Resize.Location = new System.Drawing.Point(1123, 3);
             this.Ptb_Resize.Name = "Ptb_Resize";
             this.Ptb_Resize.Size = new System.Drawing.Size(45, 40);
             this.Ptb_Resize.TabIndex = 4;
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
+            // Btn_Agregar
+            // 
+            this.Btn_Agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.Btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Agregar.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Agregar.Location = new System.Drawing.Point(983, 41);
+            this.Btn_Agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Agregar.Name = "Btn_Agregar";
+            this.Btn_Agregar.Size = new System.Drawing.Size(139, 74);
+            this.Btn_Agregar.TabIndex = 31;
+            this.Btn_Agregar.Text = "Agregar Examen";
+            this.Btn_Agregar.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Buscar.Location = new System.Drawing.Point(842, 53);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(121, 50);
+            this.Btn_Buscar.TabIndex = 30;
+            this.Btn_Buscar.Text = "Buscar";
+            this.Btn_Buscar.UseVisualStyleBackColor = false;
+            // 
+            // Txt_buscar
+            // 
+            this.Txt_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_buscar.Location = new System.Drawing.Point(38, 62);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_buscar.Name = "Txt_buscar";
+            this.Txt_buscar.Size = new System.Drawing.Size(783, 34);
+            this.Txt_buscar.TabIndex = 29;
+            // 
+            // Dtg_Base
+            // 
+            this.Dtg_Base.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Dtg_Base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dtg_Base.Location = new System.Drawing.Point(31, 161);
+            this.Dtg_Base.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Dtg_Base.Name = "Dtg_Base";
+            this.Dtg_Base.RowHeadersWidth = 51;
+            this.Dtg_Base.RowTemplate.Height = 24;
+            this.Dtg_Base.Size = new System.Drawing.Size(1070, 575);
+            this.Dtg_Base.TabIndex = 28;
+            // 
             // Frm_Examenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 704);
+            this.ClientSize = new System.Drawing.Size(1236, 803);
             this.Controls.Add(this.Pnl_Formulario);
             this.Controls.Add(this.Pnl_Menu);
             this.Controls.Add(this.Pnl_Barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Examenes";
             this.Text = "Frm_Examenes";
+            this.Pnl_Formulario.ResumeLayout(false);
+            this.Pnl_Formulario.PerformLayout();
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Barra.ResumeLayout(false);
             this.Pnl_Barra.PerformLayout();
@@ -285,6 +354,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ptb_Resize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +377,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Ptb_Resize;
         private System.Windows.Forms.Button Btn_Usuario;
+        private System.Windows.Forms.Button Btn_Agregar;
+        private System.Windows.Forms.Button Btn_Buscar;
+        private System.Windows.Forms.TextBox Txt_buscar;
+        private System.Windows.Forms.DataGridView Dtg_Base;
     }
 }

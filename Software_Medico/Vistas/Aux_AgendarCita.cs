@@ -1,5 +1,4 @@
-﻿using Software_Medico.Controlador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,38 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Software_Medico.Modelo;
-using Software_Medico.Vistas;
 
-namespace Software_Medico
+namespace Software_Medico.Vistas
 {
-    public partial class Frm_Login : Form
+    public partial class Aux_AgendarCita : Form
     {
-
-        UsuarioModel Modelo;
-        public Frm_Login()
+        public Aux_AgendarCita()
         {
             InitializeComponent();
         }
 
-        
-        private void Btn_Guardar_Click(object sender, EventArgs e)
-        {
-            
-            Frm_Menu frm_Menu = new Frm_Menu();
-            frm_Menu.Show();
-
-            this.Hide();
-        }
-        //Funcionalidad de la ventana
-        private void Ptb_Cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        //funcionaliodad de la ventana
         private void Ptb_Min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Ptb_Max_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            Ptb_Max.Visible = false;
+            Ptb_Resize.Visible = true;
+        }
+
+        private void Ptb_Resize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            Ptb_Resize.Visible = false;
+            Ptb_Max.Visible = true;
+        }
+
+        private void Ptb_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         //movilidad de la ventana
@@ -47,11 +47,6 @@ namespace Software_Medico
         private void Pnl_Barra_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
-        }
-
-        private void Btn_Cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void Pnl_Barra_MouseMove(object sender, MouseEventArgs e)

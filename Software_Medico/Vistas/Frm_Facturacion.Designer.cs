@@ -46,6 +46,8 @@
             this.Ptb_Cerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Ptb_Resize = new System.Windows.Forms.PictureBox();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.Pnl_Formulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).BeginInit();
             this.Pnl_Menu.SuspendLayout();
@@ -59,6 +61,8 @@
             // Pnl_Formulario
             // 
             this.Pnl_Formulario.BackColor = System.Drawing.SystemColors.Control;
+            this.Pnl_Formulario.Controls.Add(this.Btn_Buscar);
+            this.Pnl_Formulario.Controls.Add(this.Txt_buscar);
             this.Pnl_Formulario.Controls.Add(this.Dtg_Base);
             this.Pnl_Formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Formulario.Location = new System.Drawing.Point(101, 39);
@@ -300,6 +304,34 @@
             this.Ptb_Resize.TabStop = false;
             this.Ptb_Resize.Click += new System.EventHandler(this.Ptb_Resize_Click);
             // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.Btn_Buscar.Location = new System.Drawing.Point(823, 62);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(121, 50);
+            this.Btn_Buscar.TabIndex = 32;
+            this.Btn_Buscar.Text = "Buscar";
+            this.Btn_Buscar.UseVisualStyleBackColor = false;
+            // 
+            // Txt_buscar
+            // 
+            this.Txt_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_buscar.Location = new System.Drawing.Point(19, 71);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_buscar.Name = "Txt_buscar";
+            this.Txt_buscar.Size = new System.Drawing.Size(783, 34);
+            this.Txt_buscar.TabIndex = 31;
+            // 
             // Frm_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,6 +344,7 @@
             this.Name = "Frm_Facturacion";
             this.Text = "Frm_Facturacion";
             this.Pnl_Formulario.ResumeLayout(false);
+            this.Pnl_Formulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Base)).EndInit();
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Barra.ResumeLayout(false);
@@ -343,5 +376,7 @@
         private System.Windows.Forms.PictureBox Ptb_Cerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Ptb_Resize;
+        private System.Windows.Forms.Button Btn_Buscar;
+        private System.Windows.Forms.TextBox Txt_buscar;
     }
 }
